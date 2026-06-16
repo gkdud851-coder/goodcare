@@ -1,0 +1,6 @@
+{
+  "name": "굿케어 창업칼럼 뷰어",
+  "description": "장기요양기관 전문가 집단 굿케어의 창업칼럼을 모바일 화면으로 편리하게 읽을 수 있는 반응형 뷰어 애플리케이션입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
