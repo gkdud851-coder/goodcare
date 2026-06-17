@@ -1,12 +1,12 @@
 import React from 'react';
 import { Highlight, Quote, InfoBox, ColumnImage, WarningQuote } from "./Common";
 
-// 6. 창업 지원금 있나요?
+// 6. 주간보호센터 창업지원금 정부지원금 있나요?
 export function Step6() {
   return (
     <article className="font-serif text-[#333] text-[19px] leading-[1.85] py-4">
       <h2 className="font-sans font-extrabold text-2xl text-[#1a365d] mb-6 tracking-tight">
-        6. 창업 지원금 있나요?
+        6. 주간보호센터 창업지원금 정부지원금 있나요?
       </h2>
       <p className="mb-6 font-medium text-gray-800 leading-relaxed">
         안녕하세요.<br />
@@ -139,7 +139,7 @@ export function Step7() {
   return (
     <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
       <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
-        7. 노유자시설 1,000만 원을 아낀다고?
+        7. 노유자시설 해결하여 주간보호센터 창업비용 아끼기
       </h2>
       
       <p className="mb-6">
@@ -352,7 +352,7 @@ export function Step8() {
   return (
     <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
       <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
-        8. 구조설계, 인테리어시 조심해야 할 것
+        8. 주간보호센터 구조설계 및 인테리어 주의점
       </h2>
       
       <p className="mb-6">
@@ -491,12 +491,12 @@ export function Step8() {
   );
 }
 
-// 9. 주간보호 인수시 특약과 권리금 분석
+// 9. 주간보호센터 인수(양도양수) 시 특약과 권리금 분석
 export function Step9() {
   return (
     <article className="font-serif text-[#333] text-[19px] leading-[1.85] py-4">
       <h2 className="font-sans font-extrabold text-2xl text-[#1a365d] mb-6 tracking-tight">
-        9. 주간보호 인수(양도양수) 시 특약과 권리금 분석
+        9. 주간보호센터 인수(양도양수) 시 특약과 권리금 분석
       </h2>
       <p className="mb-6">안녕하세요 굿케어 대표 천천박사입니다.</p>
       <p className="mb-6">많은 대표님들이 주간보호 인수를 고민하십니다. 처음부터 무작정 신규 창업하긴 무섭기도 하고 두려우시겠죠.</p>
@@ -584,7 +584,7 @@ export function Step10() {
   return (
     <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
       <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
-        10. 치매 어르신 구타를 바라본 굿케어
+        10. 치매 어르신 돌봄철학과 주간보호센터 창업 가치
       </h2>
       
       <p className="mb-6 font-bold text-blue-600 bg-blue-50 p-4 rounded-xl border border-blue-100">

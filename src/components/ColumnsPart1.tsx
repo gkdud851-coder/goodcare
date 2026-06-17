@@ -6,7 +6,7 @@ export function Step1() {
   return (
     <article className="font-serif text-[#333] text-[19px] leading-[1.85] py-4">
       <h2 className="font-sans font-extrabold text-2xl text-[#1a365d] mb-6 tracking-tight">
-        1. 무경력자도 창업 할 수 있을까?
+        1. 무경력자도 주간보호센터 창업할 수 있을까?
       </h2>
       
       <p className="mb-6">
@@ -199,12 +199,12 @@ export function Step1() {
   );
 }
 
-// 2. 사회복지사 2급 있어도 창업할 수 있다고?
+// 2. 자격증 없어도 창업할 수 있다고?
 export function Step2() {
   return (
     <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
       <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
-        2. 사회복지사 2급 있어도 창업할 수 있다고?
+        2. 자격증 없어도 주간보호센터 창업할 수 있다고?
       </h2>
       
       <p className="mb-6 font-medium text-slate-800 text-xl">
@@ -366,7 +366,7 @@ export function Step3() {
   return (
     <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
       <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
-        3. 가족사업으로 해도 될까?
+        3. 주간보호센터 가족사업으로 해도 될까?
       </h2>
       
       <p className="mb-6">
@@ -514,7 +514,7 @@ export function Step4() {
   return (
     <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
       <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
-        4. 양도양수 vs 신규창업
+        4. 주간보호센터 양도양수 vs 신규창업
       </h2>
       
       <p className="mb-6">
@@ -643,7 +643,7 @@ export function Step5() {
   return (
     <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
       <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
-        5. 창업하면 얼마나 걸릴까?
+        5. 주간보호센터 창업하면 얼마나 걸릴까?
       </h2>
       
       <p className="mb-6 font-medium text-slate-800 text-xl">

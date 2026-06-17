@@ -26,16 +26,16 @@ interface TocItem {
 }
 
 const TOC_ITEMS: TocItem[] = [
-  { id: "step1", title: "1. 무경력자도 창업 할 수 있을까?" },
-  { id: "step2", title: "2. 사회복지사 2급 있어도 창업할 수 있다고?" },
-  { id: "step3", title: "3. 가족사업으로 해도 될까?" },
-  { id: "step4", title: "4. 양도양수 vs 신규창업" },
-  { id: "step5", title: "5. 창업하면 얼마나 걸릴까?" },
-  { id: "step6", title: "6. 창업 지원금 있나요?" },
-  { id: "step7", title: "7. 노유자시설 1000만원을 아낀다고?" },
-  { id: "step8", title: "8. 구조설계, 인테리어시 조심해야 할 것" },
-  { id: "step9", title: "9. 주간보호센터 창업절차 16단계" },
-  { id: "step10", title: "10. 치매 어르신 구타를 바라본 굿케어" },
+  { id: "step1", title: "1. 무경력자도 주간보호센터 창업할 수 있을까?" },
+  { id: "step2", title: "2. 자격증 없어도 주간보호센터 창업할 수 있다고?" },
+  { id: "step3", title: "3. 주간보호센터 가족사업으로 해도 될까?" },
+  { id: "step4", title: "4. 주간보호센터 양도양수 vs 신규창업" },
+  { id: "step5", title: "5. 주간보호센터 창업하면 얼마나 걸릴까?" },
+  { id: "step6", title: "6. 주간보호센터 창업지원금 정부지원금 있나요?" },
+  { id: "step7", title: "7. 노유자시설 해결하여 주간보호센터 창업비용 아끼기" },
+  { id: "step8", title: "8. 주간보호센터 구조설계 및 인테리어 주의점" },
+  { id: "step9", title: "9. 주간보호센터 창업절차 실전 16단계" },
+  { id: "step10", title: "10. 치매 어르신 돌봄철학과 주간보호센터 창업 가치" },
 ];
 
 export default function App() {
@@ -44,6 +44,119 @@ export default function App() {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [scrollPercent, setScrollPercent] = useState(0);
+
+  // 1. 초기 로드 시 쿼리 파라미터를 파싱하여 해당 탭을 띄웁니다.
+  // 뒤로 가기 / 앞으로 가기 브라우저 탐색 역시 정상 지원하여 네이버 크롤러가 전체 단계를 순회할 수 있도록 합니다.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const stepParam = params.get("step") as ArticleId | null;
+    
+    const validIds: ArticleId[] = [
+      "step-intro", "step1", "step2", "step3", "step4", "step5",
+      "step6", "step7", "step8", "step9", "step10"
+    ];
+
+    if (stepParam && validIds.includes(stepParam)) {
+      setActiveTab(stepParam);
+    }
+
+    const handlePopState = () => {
+      const p = new URLSearchParams(window.location.search);
+      const s = p.get("step") as ArticleId | null;
+      if (s && validIds.includes(s)) {
+        setActiveTab(s);
+      } else {
+        setActiveTab("step-intro");
+      }
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  // 2. 검색엔진 최적화 (SEO)를 위해 활성화된 아티클(칼럼)의 특성에 맞춰 메타데이터를 실시간으로 주입합니다.
+  // 네이버 검색 로봇(Yeti)이 자바스크립트를 해석하여 각 개별 칼럼의 타이틀과 설명문을 완벽히 인지 및 색인(Index)하도록 설계했습니다.
+  useEffect(() => {
+    let pageTitle = "굿케어 주간보호센터 창업 가이드 | 어르신유치원 노인복지센터";
+    let pageDesc = "주간보호센터창업, 어르신유치원창업, 노인복지센터창업에 대한 최고의 실전 심층 안내서. 무경력자 자격, 비용, 정부지원금, 노유자 인허가 등을 투명하게 공개합니다.";
+
+    switch (activeTab) {
+      case "step1":
+        pageTitle = "1. 무경력자도 주간보호센터 창업할 수 있을까? | 굿케어";
+        pageDesc = "경력과 지식이 전혀 없는 완전 무경력자가 주간보호센터 창업에 도전할 때 반드시 알아야 하는 실제 요건과 극복 처방전을 제공합니다.";
+        break;
+      case "step2":
+        pageTitle = "2. 자격증 없어도 주간보호센터 창업할 수 있다고? | 굿케어";
+        pageDesc = "사회복지사 자격증이 아예 없는 비전문가도 주간보호센터 창업 대표자가 되는 합법적이고 안전한 공동대표 및 시설장 채용 구조를 알아봅니다.";
+        break;
+      case "step3":
+        pageTitle = "3. 주간보호센터 가족사업으로 해도 될까? | 굿케어";
+        pageDesc = "자녀, 배우자와 함께하는 가족형 주간보호센터 창업의 세무, 인건비, 지분 구조적 장점과 경영 리스크 방지 요령을 알아봅니다.";
+        break;
+      case "step4":
+        pageTitle = "4. 주간보호센터 양도양수 vs 신규창업 | 굿케어";
+        pageDesc = "기존 주간보호센터를 인수하는 권리금 양도양수 방식과 백지 상태에서의 신규창업 인허가 단계에 필요한 세부 비용 및 세법 요인을 대조합니다.";
+        break;
+      case "step5":
+        pageTitle = "5. 주간보호센터 창업하면 얼마나 걸릴까? | 굿케어";
+        pageDesc = "도면 승인부터 공사, 지정신청 심사 및 최종 설치신고 승인까지 평균 90일~120일 소요되는 주간보호센터 창업 타임라인을 투명하게 안내합니다.";
+        break;
+      case "step6":
+        pageTitle = "6. 주간보호센터 창업지원금 정부지원금 있나요? | 굿케어";
+        pageDesc = "주간보호센터 창업지원금 혹은 정부무상보조금, 지원금 제도의 실체와 올바른 창업 자금 예산 조달 요건을 집중 분헤해 드립니다.";
+        break;
+      case "step7":
+        pageTitle = "7. 노유자시설 해결하여 주간보호센터 창업비용 아끼기 | 굿케어";
+        pageDesc = "주간보호센터 창업의 첫 단추인 상가 용도변경(노유자시설) 과정에서 건축사 조율을 통해 수천만 원을 절세하는 꿀팁을 전수합니다.";
+        break;
+      case "step8":
+        pageTitle = "8. 주간보호센터 구조설계 및 인테리어 주의점 | 굿케어";
+        pageDesc = "소방 안전시설 기준, 스프링클러 의무설치 대상, 어르신 보행 동선 및 슬라이딩 도어 등 주간보호센터 창업 인허가 실사 기준에 맞춘 체크리스트입니다.";
+        break;
+      case "step9":
+        pageTitle = "9. 주간보호센터 창업절차 실전 16단계 | 굿케어";
+        pageDesc = "부지 선택부터 개설 신고서 제출, 건보공단 장기요양기관 지정 심사까지 전 과정을 16개의 일사불란한 타임라인 단계로 완벽 정리해 드립니다.";
+        break;
+      case "step10":
+        pageTitle = "10. 치매 어르신 돌봄철학과 주간보호센터 창업 가치 | 굿케어";
+        pageDesc = "어르신 학대 예방부터 사람의 존엄을 지켜내는 굿케어만의 명품 실버 케어 철학과 지속 가능한 운영 비전을 나눕니다.";
+        break;
+      case "step-intro":
+      default:
+        pageTitle = "굿케어 주간보호센터 창업 가이드 | 대표 원장 천천박사 특강";
+        pageDesc = "주간보호센터 창업의 진실! 가맹, 도면설계, 인허가 절벽에서 헤매는 대표님들을 위해 천천박사팀이 일대일 무상 비공개 컨설팅을 진행합니다.";
+        break;
+    }
+
+    document.title = pageTitle;
+    
+    // 메타 설명 태그 및 og(오픈그래프) 속성 실시간 보정
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement("meta");
+      metaDesc.setAttribute("name", "description");
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute("content", pageDesc);
+
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", pageTitle);
+    
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", pageDesc);
+
+    let linkCanonical = document.querySelector('link[rel="canonical"]');
+    if (!linkCanonical) {
+      linkCanonical = document.createElement("link");
+      linkCanonical.setAttribute("rel", "canonical");
+      document.head.appendChild(linkCanonical);
+    }
+    const currentOrigin = window.location.origin || "https://goodcare-startup.co.kr";
+    const canonicalUrl = activeTab === "step-intro" 
+      ? currentOrigin + window.location.pathname 
+      : `${currentOrigin}${window.location.pathname}?step=${activeTab}`;
+    linkCanonical.setAttribute("href", canonicalUrl);
+  }, [activeTab]);
 
   // 스크롤 위치를 감지하여 진행률(Progress) 바 퍼센트를 계산합니다.
   useEffect(() => {
@@ -75,6 +188,10 @@ export default function App() {
     setActiveTab(id);
     setIsModalOpen(false);
     
+    // 주행 중인 URL의 쿼리 주소를 업데이트하여 검색 크롤러의 순회를 원활히 돕습니다.
+    const newUrl = id === "step-intro" ? window.location.pathname : `?step=${id}`;
+    window.history.pushState({ step: id }, "", newUrl);
+    
     // 즉각적인 스크롤 리셋
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollTop = 0;
@@ -83,7 +200,7 @@ export default function App() {
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
     
-    // 약간의 딜레이들을 주어 탭 렌더링 직후 맨 위로 스크롤 시킴 (비동기식 리렌더와 애니메이션 유실 대응)
+    // 약간의 딜레이들을 주어 탭 렌더링 직후 맨 위로 스크롤 시킴
     const forceReset = () => {
       if (scrollContainerRef.current) {
         scrollContainerRef.current.scrollTop = 0;
@@ -134,8 +251,12 @@ export default function App() {
           <ul className="flex flex-col gap-2.5">
             {/* 인트로 다시보기 버튼 */}
             <li>
-              <button
-                onClick={() => handleSelectArticle("step-intro")}
+              <a
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSelectArticle("step-intro");
+                }}
                 className={`w-full text-left flex items-center justify-between px-4 py-3 rounded-xl font-bold transition-all border ${
                   activeTab === "step-intro"
                     ? "bg-blue-600 text-white border-blue-600 shadow-sm"
@@ -147,7 +268,7 @@ export default function App() {
                   <span>인트로 화면 가기</span>
                 </div>
                 <ChevronRight className="w-4 h-4 opacity-70" />
-              </button>
+              </a>
             </li>
 
             {TOC_ITEMS.map((item) => {
@@ -172,8 +293,12 @@ export default function App() {
 
               return (
                 <li key={item.id}>
-                  <button
-                    onClick={() => handleSelectArticle(item.id)}
+                  <a
+                    href={`?step=${item.id}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleSelectArticle(item.id);
+                    }}
                     className={`w-full text-left flex items-center justify-between px-4 py-3.5 rounded-xl font-bold transition-all border duration-200 text-[15px] ${
                       activeTab === item.id
                         ? "bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-500/10"
@@ -182,7 +307,7 @@ export default function App() {
                   >
                     <span className="truncate pr-2">{item.title}</span>
                     <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-70" />
-                  </button>
+                  </a>
                 </li>
               );
             })}
@@ -196,13 +321,17 @@ export default function App() {
           
           {/* 모바일 최적화 상단 헤더 (모바일 화면 한정 노출) */}
           <header className="lg:hidden w-full bg-white border-b border-slate-100 px-6 py-4 flex items-center justify-between select-none shrink-0 sticky top-0 z-15">
-            <button
-               onClick={() => handleSelectArticle("step-intro")}
+            <a
+               href="/"
+               onClick={(e) => {
+                 e.preventDefault();
+                 handleSelectArticle("step-intro");
+               }}
                className="flex items-center gap-1.5 text-slate-800"
             >
               <Logo className="w-9 h-9" containerClassName="bg-blue-50 p-1 rounded-full border border-blue-100/50" />
               <span className="font-extrabold text-base tracking-tight select-none">굿케어</span>
-            </button>
+            </a>
             
             <a
               href="tel:1522-3133"
@@ -382,8 +511,12 @@ export default function App() {
                   {/* 모달 목차 스크롤 리스트 */}
                   <div className="flex-1 overflow-y-auto px-6 py-4 flex flex-col gap-2.5">
                     {/* 인트로 보기 */}
-                    <button
-                      onClick={() => handleSelectArticle("step-intro")}
+                    <a
+                      href="/"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleSelectArticle("step-intro");
+                      }}
                       className={`w-full text-left flex items-center justify-between px-4 py-3.5 rounded-2xl font-bold border transition ${
                         activeTab === "step-intro"
                           ? "bg-blue-600 text-white border-blue-600 shadow-md"
@@ -392,7 +525,7 @@ export default function App() {
                     >
                       <span className="text-[14px]">인트로 화면 가기</span>
                       <ChevronRight className="w-4 h-4" />
-                    </button>
+                    </a>
 
                     {TOC_ITEMS.map((item) => {
                       const isYoutubeLink = item.id === "step9";
@@ -415,9 +548,13 @@ export default function App() {
                       }
 
                       return (
-                        <button
+                        <a
                           key={item.id}
-                          onClick={() => handleSelectArticle(item.id)}
+                          href={`?step=${item.id}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleSelectArticle(item.id);
+                          }}
                           className={`w-full text-left flex items-center justify-between px-4 py-3.5 rounded-2xl font-bold border transition duration-150 ${
                             activeTab === item.id
                               ? "bg-blue-600 text-white border-blue-600 shadow-md"
@@ -426,7 +563,7 @@ export default function App() {
                         >
                           <span className="text-[14px] truncate pr-2">{item.title}</span>
                           <ChevronRight className="w-4 h-4 flex-shrink-0" />
-                        </button>
+                        </a>
                       );
                     })}
                   </div>

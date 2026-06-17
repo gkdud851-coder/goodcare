@@ -87,13 +87,17 @@ export default function Intro({ onStart }: { onStart: () => void }) {
 
       {/* 하단 시작 버튼 */}
       <div className="w-full z-10 flex flex-col items-center gap-2.5 mt-2">
-        <button 
-          onClick={onStart}
+        <a 
+          href="?step=step1"
+          onClick={(e) => {
+            e.preventDefault();
+            onStart();
+          }}
           className="w-full max-w-[280px] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 active:scale-95 text-white font-extrabold text-base py-4 rounded-full shadow-[0_6px_25px_-4px_rgba(37,99,235,0.4)] hover:shadow-[0_8px_30px_-4px_rgba(37,99,235,0.5)] transition-all cursor-pointer flex items-center justify-center gap-2"
         >
           <span>핵심 창업 가이드 바로 시작하기</span>
           <span className="animate-bounce">👉</span>
-        </button>
+        </a>
         <span className="text-[11px] text-slate-400 font-medium">
           ※ 3분만에 완독하는 고농축 창업 비법서
         </span>
