@@ -41,6 +41,7 @@ const TOC_ITEMS: TocItem[] = [
 export default function App() {
   const [activeTab, setActiveTab] = useState<ArticleId>("step-intro");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [scrollPercent, setScrollPercent] = useState(0);
 
@@ -74,12 +75,28 @@ export default function App() {
     setActiveTab(id);
     setIsModalOpen(false);
     
-    // 약간의 딜레이를 주어 탭 렌더링 직후 맨 위로 스크롤 시킴
-    setTimeout(() => {
+    // 즉각적인 스크롤 리셋
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = 0;
+    }
+    window.scrollTo({ top: 0, behavior: "auto" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
+    // 약간의 딜레이들을 주어 탭 렌더링 직후 맨 위로 스크롤 시킴 (비동기식 리렌더와 애니메이션 유실 대응)
+    const forceReset = () => {
       if (scrollContainerRef.current) {
         scrollContainerRef.current.scrollTop = 0;
       }
-    }, 50);
+      window.scrollTo({ top: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    setTimeout(forceReset, 10);
+    setTimeout(forceReset, 50);
+    setTimeout(forceReset, 150);
+    setTimeout(forceReset, 350);
   };
 
   return (
@@ -174,8 +191,8 @@ export default function App() {
       </aside>
 
       {/* ────────────────── 2. 오른쪽 폰 시뮬레이터 뷰포트 ────────────────── */}
-      <main className="w-full lg:ml-[40%] xl:ml-[35%] lg:w-[60%] xl:w-[65%] min-h-screen flex items-center justify-center p-0 sm:py-10 md:px-6 select-text">
-        <div className="w-full max-w-[420px] h-full sm:h-[840px] bg-white sm:border-[12px] sm:border-slate-900 sm:rounded-[40px] sm:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.18)] relative flex flex-col overflow-hidden">
+      <main className="w-full lg:ml-[40%] xl:ml-[35%] lg:w-[60%] xl:w-[65%] h-[100dvh] sm:min-h-screen flex items-center justify-center p-0 sm:py-10 md:px-6 select-text overflow-hidden sm:overflow-visible">
+        <div className="w-full max-w-[420px] h-[100dvh] sm:h-[840px] bg-white sm:border-[12px] sm:border-slate-900 sm:rounded-[40px] sm:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.18)] relative flex flex-col overflow-hidden">
           
           {/* 모바일 최적화 상단 헤더 (모바일 화면 한정 노출) */}
           <header className="lg:hidden w-full bg-white border-b border-slate-100 px-6 py-4 flex items-center justify-between select-none shrink-0 sticky top-0 z-15">
@@ -196,6 +213,16 @@ export default function App() {
             </a>
           </header>
 
+          {/* 칼럼 읽기 진행률 진행바 (가느다란 Progress Bar) - 스크롤 뷰포트 영역의 완전한 최상단 고정 */}
+          {activeTab !== "step-intro" && (
+            <div className="w-full h-1.5 bg-slate-100 z-30 pointer-events-none shrink-0 relative">
+              <div 
+                className="h-full bg-rose-500 rounded-r-full transition-all duration-100 shadow-[0_1px_3px_rgba(244,63,94,0.3)]" 
+                style={{ width: `${scrollPercent}%` }} 
+              />
+            </div>
+          )}
+
           {/* 모바일 리얼 콘텐츠 스크롤 컨테이너 */}
           <div 
             ref={scrollContainerRef}
@@ -205,16 +232,6 @@ export default function App() {
               scrollBehavior: "smooth"
             }}
           >
-            {/* 칼럼 읽기 진행률 진행바 (가느다란 Progress Bar) */}
-            {activeTab !== "step-intro" && (
-              <div className="sticky top-0 left-0 w-full h-1 bg-slate-100 z-30 pointer-events-none">
-                <div 
-                  className="h-full bg-rose-500 rounded-r-full transition-all duration-75" 
-                  style={{ width: `${scrollPercent}%` }} 
-                />
-              </div>
-            )}
-
             {/* 탭 렌더 제어 */}
             <AnimatePresence mode="wait">
               <motion.div
@@ -240,13 +257,82 @@ export default function App() {
             </AnimatePresence>
           </div>
 
-          {/* ────────────────── 3. 하단 모바일 전용 목록 플로팅 배너 ────────────────── */}
+          {/* ────────────────── 3. 하단 모바일 전용 목록 플로팅 배너 및 문의 바로가기 ────────────────── */}
+          
+          {/* 문의 바로가기 플로팅 버튼 - 모바일 화면 우측 하단 고정 (배너 여부에 따라 높이 동적 가변) */}
+          <div className={`absolute right-5 z-30 flex flex-col items-end select-none transition-all duration-300 ${activeTab === "step-intro" ? "bottom-5" : "bottom-[92px]"}`}>
+            <AnimatePresence>
+              {isInquiryOpen && (
+                <>
+                  {/* 모달/팝오버 닫기용 백드롭 (투명 레이어) */}
+                  <div 
+                    className="fixed inset-0 z-10" 
+                    onClick={() => setIsInquiryOpen(false)} 
+                  />
+                  
+                  {/* 문의 옵션 팝업 */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: 10 }}
+                    className="relative z-20 mb-3.5 w-64 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_12px_36px_rgba(30,27,75,0.22)] border border-white/45 p-4 flex flex-col gap-2.5"
+                  >
+                    <div className="text-[11px] font-black tracking-wide text-rose-500 uppercase px-1">
+                      ⚡ 굿케어 전문가 빠른 상담
+                    </div>
+                    
+                    {/* 1. 무료상담 설문지 신청 */}
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSekX8lrSd9oufmhPXVGDcdVo89cNsou1fYgGRc3ldOdzVb0mA/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsInquiryOpen(false)}
+                      className="flex items-center gap-3.5 p-3.5 bg-indigo-50/70 hover:bg-indigo-100/90 text-indigo-950 rounded-xl transition-all border border-indigo-100/40 group backdrop-blur-xs"
+                    >
+                      <div className="p-2.5 bg-indigo-600/90 text-white rounded-lg shadow-sm">
+                        <BookOpen className="w-4 h-4" />
+                      </div>
+                      <div className="flex flex-col text-left">
+                        <span className="text-sm font-black group-hover:text-indigo-600 transition-colors">무료상담 신청</span>
+                        <span className="text-[11px] text-slate-500 font-bold mt-0.5">1분 완성 진단 설문</span>
+                      </div>
+                    </a>
+
+                    {/* 2. 전화 연결 */}
+                    <a
+                      href="tel:1522-3133"
+                      onClick={() => setIsInquiryOpen(false)}
+                      className="flex items-center gap-3.5 p-3.5 bg-rose-50/70 hover:bg-rose-100/90 text-rose-950 rounded-xl transition-all border border-rose-100/40 group backdrop-blur-xs"
+                    >
+                      <div className="p-2.5 bg-rose-500/90 text-white rounded-lg shadow-sm">
+                        <Phone className="w-4 h-4 fill-white/10" />
+                      </div>
+                      <div className="flex flex-col text-left">
+                        <span className="text-sm font-black group-hover:text-rose-600 transition-colors">1522-3133 전화연결</span>
+                        <span className="text-[11px] text-slate-500 font-bold mt-0.5">굿케어 가맹 문의 (내선 1번)</span>
+                      </div>
+                    </a>
+                  </motion.div>
+                </>
+              )}
+            </AnimatePresence>
+
+            {/* 플로팅 호출 버튼 */}
+            <button
+              id="floatingInquiryBtn"
+              onClick={() => setIsInquiryOpen(!isInquiryOpen)}
+              className="flex items-center justify-center w-12 h-12 bg-rose-500/95 hover:bg-rose-600 backdrop-blur-md active:scale-95 text-white rounded-full shadow-[0_8px_20px_rgba(244,63,94,0.35)] transition-all cursor-pointer relative border border-white/10"
+            >
+              <Phone className="w-5 h-5 fill-white/10" />
+            </button>
+          </div>
+
           {activeTab !== "step-intro" && (
-            <div className="absolute bottom-0 left-0 w-full z-20">
-              <div className="bg-gradient-to-t from-white via-white/95 to-transparent pt-6 pb-4 px-6 flex justify-center shrink-0">
+            <div className="absolute bottom-0 left-0 w-full z-20 font-sans">
+              <div className="bg-gradient-to-t from-white/90 via-white/60 to-transparent backdrop-blur-xs pt-6 pb-5 px-6 flex justify-center shrink-0 border-t border-slate-100/10">
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full max-w-[280px] bg-indigo-900 text-white font-extrabold text-sm py-4 px-6 rounded-full shadow-[0_8px_24px_rgba(30,27,75,0.25)] flex items-center justify-center gap-2 hover:bg-indigo-950 active:scale-95 transition-all cursor-pointer"
+                  className="w-full max-w-[280px] bg-indigo-900/90 hover:bg-indigo-950 backdrop-blur-md text-white font-extrabold text-sm py-4 px-6 rounded-full shadow-[0_8px_24px_rgba(30,27,75,0.2)] flex items-center justify-center gap-2 active:scale-95 transition-all cursor-pointer border border-white/10"
                 >
                   <List className="w-4 h-4" />
                   <span>다른 창업 가이드 읽기</span>

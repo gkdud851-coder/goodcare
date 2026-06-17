@@ -1,3 +1,4 @@
+import React from 'react';
 import { Highlight, Quote, InfoBox, ColumnImage, WarningQuote } from "./Common";
 
 // 1. 무경력자도 창업 할 수 있을까?
@@ -359,7 +360,7 @@ export function Step2() {
 }
 
 // 3. 가족사업으로 해도 될까?
-import React from 'react';
+
 
 export function Step3() {
   return (
@@ -507,7 +508,7 @@ export function Step3() {
 }
 
 // 4. 양도양수 vs 신규창업
-import React from 'react';
+
 
 export function Step4() {
   return (
@@ -636,7 +637,7 @@ export function Step4() {
 }
 
 // 5. 창업하면 얼마나 걸릴까?
-import React from 'react';
+
 
 export function Step5() {
   return (

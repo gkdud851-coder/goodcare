@@ -1,3 +1,4 @@
+import React from 'react';
 import { Highlight, Quote, InfoBox, ColumnImage, WarningQuote } from "./Common";
 
 // 6. 창업 지원금 있나요?
@@ -132,7 +133,7 @@ export function Step6() {
 }
 
 // 7. 노유자시설 1000만원을 아낀다고?
-import React from 'react';
+
 
 export function Step7() {
   return (
@@ -345,7 +346,7 @@ export function Step7() {
 }
 
 // 8. 구조설계, 인테리어시 조심해야 할 것
-import React from 'react';
+
 
 export function Step8() {
   return (
@@ -577,7 +578,7 @@ export function Step9() {
 }
 
 // 10. 치매 어르신 구타를 바라본 굿케어
-import React from 'react';
+
 
 export function Step10() {
   return (
