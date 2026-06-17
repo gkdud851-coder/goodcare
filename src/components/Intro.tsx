@@ -5,19 +5,19 @@ export default function Intro({ onStart }: { onStart: () => void }) {
   const [mainPhotoSrc, setMainPhotoSrc] = useState("/images/메인사진.png");
 
   return (
-    <div className="w-full min-h-full flex flex-col items-center justify-between text-center px-6 py-10 relative font-sans select-none bg-gradient-to-b from-rose-50/80 via-white to-slate-50/60">
+    <div className="w-full min-h-full flex flex-col items-center justify-between text-center px-6 py-10 relative font-sans select-none bg-gradient-to-b from-blue-50/70 via-white to-slate-50/60">
       
       {/* 장식용 탑 플로팅 데코 */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-rose-200/20 to-teal-200/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-200/20 to-teal-200/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute top-1/4 left-0 w-24 h-24 bg-gradient-to-tr from-indigo-200/20 to-transparent rounded-full blur-2xl pointer-events-none" />
 
       {/* 상단 로고 & 브랜딩 */}
       <div className="flex flex-col items-center gap-1.5 mt-4 z-10 animate-fade-in">
-        <span className="text-xs bg-rose-100/70 border border-rose-200 text-rose-600 font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-2 select-none shadow-[0_1px_5px_rgba(244,63,94,0.08)]">
+        <span className="text-xs bg-blue-100/70 border border-blue-200 text-blue-600 font-extrabold px-3 py-1 rounded-full uppercase tracking-wider mb-2 select-none shadow-[0_1px_5px_rgba(37,99,235,0.08)]">
           🏆 누적 1,400+ 기관의 동행 파트너
         </span>
-        <div className="flex items-center gap-2 mt-1">
-          <Logo className="w-7 h-7" containerClassName="bg-rose-500 p-1.5 rounded-full text-white shadow-md flex items-center justify-center shrink-0" />
+        <div className="flex items-center gap-2.5 mt-1">
+          <Logo className="w-12 h-12" containerClassName="bg-blue-50 p-1 rounded-full border border-blue-100/50" />
           <span className="text-slate-900 font-black text-2xl tracking-tight">굿케어</span>
         </div>
       </div>
@@ -48,12 +48,12 @@ export default function Intro({ onStart }: { onStart: () => void }) {
         </div>
 
         <div className="space-y-1.5">
-          <p className="text-rose-500 font-semibold text-sm tracking-wide bg-rose-50 px-3 py-1 rounded-lg inline-block">
+          <p className="text-blue-600 font-semibold text-sm tracking-wide bg-blue-50 px-3 py-1 rounded-lg inline-block">
             안녕하세요, 굿케어 대표 천천박사입니다.
           </p>
           <h1 className="text-slate-950 font-black text-3xl leading-snug tracking-tight pt-1">
             "복지도 결국 <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-indigo-600">진짜 사업입니다!</span>"
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">진짜 사업입니다!</span>"
           </h1>
         </div>
 
@@ -89,7 +89,7 @@ export default function Intro({ onStart }: { onStart: () => void }) {
       <div className="w-full z-10 flex flex-col items-center gap-2.5 mt-2">
         <button 
           onClick={onStart}
-          className="w-full max-w-[280px] bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 active:scale-95 text-white font-extrabold text-base py-4 rounded-full shadow-[0_6px_25px_-4px_rgba(244,63,94,0.4)] hover:shadow-[0_8px_30px_-4px_rgba(244,63,94,0.5)] transition-all cursor-pointer flex items-center justify-center gap-2"
+          className="w-full max-w-[280px] bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 active:scale-95 text-white font-extrabold text-base py-4 rounded-full shadow-[0_6px_25px_-4px_rgba(37,99,235,0.4)] hover:shadow-[0_8px_30px_-4px_rgba(37,99,235,0.5)] transition-all cursor-pointer flex items-center justify-center gap-2"
         >
           <span>핵심 창업 가이드 바로 시작하기</span>
           <span className="animate-bounce">👉</span>

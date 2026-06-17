@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <!-- 굿케어 정식의 신뢰감 높은 블루-인디고 하트 그라데이션 -->
+    <linearGradient id="goodCareGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="60%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="handGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+
+  <!-- 원형 백그라운드 은은한 원호 -->
+  <circle cx="50" cy="50" r="46" fill="none" stroke="#e2e8f0" stroke-width="2" />
+  
+  <!-- 전체가 '돌봄'과 '성장'을 뜻하는 커다란 생명의 하트 & 새싹 모이어티 -->
+  <g transform="translate(0, -2)">
+    <!-- 1. 부드럽고 둥글게 보듬어안는 하트 폼 -->
+    <path d="M50 35 C41 22, 22 25, 22 44 C22 62, 50 78, 50 78 C50 78, 78 62, 78 44 C78 25, 59 22, 50 35 Z" 
+          fill="url(#goodCareGrad)" 
+          opacity="0.95" 
+          filter="drop-shadow(0px 3px 5px rgba(37,99,235,0.3))" />
+
+    <!-- 2. 서로 맞대고 누군가를 지탱하는 손 모양의 은은한 음각/양각 화이트 패스 -->
+    <path d="M34 52 C34 43, 44 38, 50 45 C56 38, 66 43, 66 52 C66 61, 50 71, 50 71 C50 71, 34 61, 34 52 Z" 
+          fill="#ffffff" />
+
+    <!-- 3. 손 안에서 자라나는 희망의 중심 하트 (작고 깨끗한 포인트) -->
+    <path d="M50 49 C46 44, 39 45, 39 52 C39 59, 50 66, 50 66 C50 66, 61 59, 61 52 C61 45, 54 44, 50 49 Z" 
+          fill="#3b82f6" />
+
+    <!-- 4. 하트 상단 우측에 돋아나 있는 굿케어의 '생명력과 치료'를 뜻하는 새싹 잎사귀 -->
+    <path d="M49 32 C50 25, 56 20, 62 19 C61 24, 57 29, 52 31 C51 32, 49 32, 49 32 Z" 
+          fill="url(#leafGrad)" />
+    <path d="M50 33 C45 28, 43 21, 44 15 C49 17, 52 23, 52 29 C52 31, 50 33, 50 33 Z" 
+          fill="url(#leafGrad)" opacity="0.85" />
+  </g>
+</svg>

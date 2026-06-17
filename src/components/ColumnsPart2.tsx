@@ -25,7 +25,7 @@ export function Step6() {
       <p className="mb-6 font-medium text-indigo-900">왜냐하면 이 질문 앞에서, '내가 할 사업이 아니구나'를 재점검 해보실 수 있거든요.</p>
       <p className="mb-6">바로 <Highlight>'출발의 차이가, 관점의 차이'</Highlight>가 사업의 승패를 가져오기에 꼭 점검 해보셔야 합니다.</p>
       
-      <p className="mb-6 font-bold text-rose-600">일단 명확히 말씀드릴 것은, 창업 정부지원금이나 창업 지원 정책은 없습니다.</p>
+      <p className="mb-6 font-bold text-blue-600">일단 명확히 말씀드릴 것은, 창업 정부지원금이나 창업 지원 정책은 없습니다.</p>
       <p className="mb-6">있다고 하면 있다고 할 수 있는데 살펴볼거 다 살펴보고, 설명드려볼게요.</p>
 
       <ColumnImage src="/images/6-1.jpg" alt="정부 무상 창업 지원금 현실" />
@@ -44,7 +44,7 @@ export function Step6() {
 
       <p className="mb-6">서류 하나 준비하고, 지정심사 과정에서조차 대표님의 '행정사 및 컨설팅 비용'을 쓰셔야 합니다.</p>
       <p className="mb-6">창업 지원금이 있을 정도의 국가사업이라면, 그만큼 시장에 필요하단 이야기이고, 국가에서 발 벗고 나서서, 공무원분들의 전담마크를 받으며 서류 도움을 받으셨을 겁니다.</p>
-      <p className="mb-6 font-bold text-rose-600">하지만 우리 시장은 어떤가요? 주간보호, 요양원, 방문요양 많아도 너무 많습니다.</p>
+      <p className="mb-6 font-bold text-blue-600">하지만 우리 시장은 어떤가요? 주간보호, 요양원, 방문요양 많아도 너무 많습니다.</p>
       <p className="mb-6">워낙 많다보니 3년마다 재갱신심사를 통해 잘못된 운영을 하는 기관은 오히려 폐업을 처리하는 지경이라고 하니, 지금 잘 고민해보셔야 합니다.</p>
 
       <ColumnImage src="/images/6-2.jpg" alt="장기요양기관 창업 자금 운영과 보조금 진실" />
@@ -92,7 +92,7 @@ export function Step6() {
 
       <ColumnImage src="/images/6-3.jpg" alt="고용 창출 가산금과 면세 혜택 조건" />
 
-      <p className="mb-6 font-medium text-rose-600">
+      <p className="mb-6 font-medium text-blue-600">
         너무 부정적인 이야기만 해서, 주변 창업 회사들로부터 욕을 먹는건 아닌지 싶네요...
       </p>
 
@@ -166,7 +166,7 @@ export function Step7() {
         기본 소방시설은 물론, 병원, 의원 수준에 근접할 정도로 각종 시설들을 갖추어야 하기에 공사비용이 정말 만만치 않습니다.
       </p>
       
-      <p className="mb-6 font-bold text-rose-600">
+      <p className="mb-6 font-bold text-blue-600">
         그래서일까요? 주간보호 임대 매물을 찾으실 때, 뒤도 돌아보지 말고 나와야하는 7가지 체크사항이 있다고 합니다.
       </p>
       
@@ -308,7 +308,7 @@ export function Step7() {
         </ul>
       </div>
 
-      <p className="mb-6 font-bold text-rose-600">
+      <p className="mb-6 font-bold text-blue-600">
         최소 5명만 모으셔도, 그 어떠한 것을 하시는 것보다 수많은 비용을 절감하실 수 있습니다.
       </p>
       
@@ -369,7 +369,7 @@ export function Step8() {
         장기요양 기관들을 지원한 7년 동안 저희는 3천 명에 달하는 고객분들을 만나왔습니다. 그러면서 가장 충격적이었던 것은 생각보다 많은 고객분들께서 온라인, 오프라인에서 잘못된 정보에 잘 속는다는 것이었습니다.
       </p>
       
-      <p className="mb-6 font-semibold text-rose-600">
+      <p className="mb-6 font-semibold text-blue-600">
         어쩌면 누군가 저희를 질책할 수도 있지만, 오늘 우리는 이러한 부조리를 바로잡고자 합니다.
       </p>
       
@@ -401,7 +401,7 @@ export function Step8() {
         주간보호센터 설계는 한정된 공간에서 최대한의 정원을 받을 수 있으면서도 어르신의 동선과 안전, 선생님들의 동선과 서비스 공간이 적절히 확보되어야 합니다.
       </p>
       
-      <p className="mb-6 text-rose-600 font-bold">
+      <p className="mb-6 text-blue-600 font-bold">
         잘못된 설계의 경우 어르신의 낙상 사고, 직원들의 업무공간 부족으로 어르신들의 공간을 사용하게 됨으로써 장기 요양 공단 모니터링, 평가 시에 문제가 발생됩니다.
       </p>
 
@@ -441,7 +441,7 @@ export function Step8() {
         창업을 준비하시며 알아보시면 최근 자재비와 인건비가 많이 올라서 인테리어 전문 업체는 대략 평당 100만 원부터 200만 원까지 다양한 견적을 받으실 수 있을 겁니다. 그런데,
       </p>
 
-      <Quote className="bg-red-50 border-rose-600 text-rose-800">
+      <Quote className="bg-red-50 border-blue-600 text-blue-800">
         두 배 비싼 200만 원짜리 인테리어를 한다고 어르신이 두 배 더 오시진 않습니다.
       </Quote>
 
@@ -557,7 +557,7 @@ export function Step9() {
         3. 어르신 권리금 분석의 무서운 허점
       </h3>
       <p className="mb-6">주간보호 양도 가격(양수 대금)은 겉포장 시 여러 갈래 합산액으로 산정됩니다. 시설 시공에 소모된 시설 권리금도 있지만, 핵심은 입소 어르신 1명당 책정하는 <strong>'어르신 권리금(소위 머릿수 대금)'</strong>입니다.</p>
-      <p className="mb-6 text-rose-600 font-bold">주간보호 명부에 단순히 등록이 가득 차 있다고 해서 50명 머릿수 권리금을 냉큼 온전히 내시면, 바보처럼 수천만 원을 사기당하시는 지름길입니다.</p>
+      <p className="mb-6 text-blue-600 font-bold">주간보호 명부에 단순히 등록이 가득 차 있다고 해서 50명 머릿수 권리금을 냉큼 온전히 내시면, 바보처럼 수천만 원을 사기당하시는 지름길입니다.</p>
       <p className="mb-6">실제 요양 시장에서는 아무리 국가공인 최우수(A) 브랜드 센터라 하더라도, 입소 어르신들의 실질적인 평균 출석률은 통상 평균 88% 내외를 선회 유지합니다.</p>
       
       <div className="bg-slate-50 border border-slate-200 p-5 rounded-xl my-6 font-sans text-stone-800 font-medium">
@@ -572,7 +572,7 @@ export function Step9() {
       </h3>
       <p className="mb-6 font-medium text-gray-800">타인이 모아둔 수십 명의 치매 어르신들과 이미 텃세가 형성되어 눈을 부라리는 늙은 요양보호사 직원들 사이에 신임 대표가 낙하산처럼 뚝 떨어져 정서적 바톤터치를 완벽 성취해 나가는 것은, 생판 신규 창업보다 고도로 골치 아픈 험난한 과도 과정입니다.</p>
       <p className="mb-6">더불어, 만약 양수 총 투자 비용 회수에 따른 손익분기 도출 기간(BEP)이 3년 이상 소요되는 구조라면, 대표님은 사실상 3년 동안 국가를 위해 무임금 노예 봉사를 하시는 것과 진배없는 엄청난 기회 수렁에 빠진 것 입니다.</p>
-      <p className="mb-6 font-semibold text-rose-600">오늘 알려드린 정교한 특약 3대 안전벨트를 반드시 구비하십시오. 무경력 설립이라도 안전한 성공 거처로 직진하시도록, 굿케어 전문가들의 전폭 컨설팅을 언제든 신청해 보시기 바랍니다. 감사합니다.</p>
+      <p className="mb-6 font-semibold text-blue-600">오늘 알려드린 정교한 특약 3대 안전벨트를 반드시 구비하십시오. 무경력 설립이라도 안전한 성공 거처로 직진하시도록, 굿케어 전문가들의 전폭 컨설팅을 언제든 신청해 보시기 바랍니다. 감사합니다.</p>
     </article>
   );
 }
@@ -587,7 +587,7 @@ export function Step10() {
         10. 치매 어르신 구타를 바라본 굿케어
       </h2>
       
-      <p className="mb-6 font-bold text-rose-600 bg-rose-50 p-4 rounded-xl border border-rose-100">
+      <p className="mb-6 font-bold text-blue-600 bg-blue-50 p-4 rounded-xl border border-blue-100">
         김천의 한 주간보호센터에서 치매를 앓고 있는 42kg밖에 나가지 않는 80대 할머니를 원장과 직원들이 집단폭행 한 사건이다.
       </p>
       
@@ -648,7 +648,7 @@ export function Step10() {
         주간보호센터를 창업하려면 임대보증금, 인테리어 비용, 인건비 등등.. 몇억 단위의 돈이 들어간다. 주간보호 센터는 규모 대비 투자금도 수익도 달라진다.
       </p>
       
-      <p className="mb-6 font-bold text-rose-600">
+      <p className="mb-6 font-bold text-blue-600">
         수익률만 바라보고 사업을 하고 싶다면, 제발 돈 더 되는 다른 사업을 찾아가시는 게 맞다.
       </p>
       
@@ -682,7 +682,7 @@ export function Step10() {
         어르신을 모시는 데 탁월한 사람일 수도 있다. 가슴이 따뜻하다 못해 뜨겁다. 그러나 사업을 직접 해본 경험은 없다. 복지관이나 주간보호 센터에서 봉사를 해봐서 어떻게 돌아가는지는 대충 살펴봤다.
       </p>
       
-      <p className="mb-6 font-bold text-rose-600">
+      <p className="mb-6 font-bold text-blue-600">
         수익구조가 어떻게 되는지, 인력 관리는 어떻게 하는지, 청구는 어떻게 하는지, 회계나 행정서류는 아무것도 모르고 관심조차도 없다.
       </p>
       

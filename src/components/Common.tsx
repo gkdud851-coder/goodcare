@@ -1,32 +1,58 @@
 import { ReactNode, useState } from "react";
-import { HeartHandshake } from "lucide-react";
 
 const logoSources = [
+  "/images/로고1.png",
+  "/images/로고.jpg",
+  "/images/logo.svg",
   "/images/logo.png",
   "/images/로고.png",
   "/images/logo.jpg",
-  "/images/logo.svg",
   "/logo.png"
 ];
 
-export function Logo({ className = "w-6 h-6", containerClassName = "bg-rose-500 p-2 rounded-full text-white shadow-md flex items-center justify-center shrink-0" }: { className?: string; containerClassName?: string }) {
+export function Logo({ className = "w-10 h-10", containerClassName = "" }: { className?: string; containerClassName?: string }) {
   const [logoIndex, setLogoIndex] = useState(0);
 
+  let element;
   if (logoIndex < logoSources.length) {
-    return (
+    element = (
       <img
         src={logoSources[logoIndex]}
         alt="굿케어 로고"
         onError={() => setLogoIndex(prev => prev + 1)}
-        className={`${className} object-contain rounded-full`}
+        className="w-full h-full object-contain"
         referrerPolicy="no-referrer"
       />
+    );
+  } else {
+    element = (
+      <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="fallbackGoodCareGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#60a5fa" />
+            <stop offset="60%" stop-color="#2563eb" />
+            <stop offset="100%" stop-color="#1d4ed8" />
+          </linearGradient>
+          <linearGradient id="fallbackLeafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#34d399" />
+            <stop offset="100%" stop-color="#059669" />
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#e2e8f0" stroke-width="2" />
+        <g transform="translate(0, -2)">
+          <path d="M50 35 C41 22, 22 25, 22 44 C22 62, 50 78, 50 78 C50 78, 78 62, 78 44 C78 25, 59 22, 50 35 Z" fill="url(#fallbackGoodCareGrad)" opacity="0.95" />
+          <path d="M34 52 C34 43, 44 38, 50 45 C56 38, 66 43, 66 52 C66 61, 50 71, 50 71 C50 71, 34 61, 34 52 Z" fill="#ffffff" />
+          <path d="M50 49 C46 44, 39 45, 39 52 C39 59, 50 66, 50 66 C50 66, 61 59, 61 52 C61 45, 54 44, 50 49 Z" fill="#3b82f6" />
+          <path d="M49 32 C50 25, 56 20, 62 19 C61 24, 57 29, 52 31 C51 32, 49 32, 49 32 Z" fill="url(#fallbackLeafGrad)" />
+          <path d="M50 33 C45 28, 43 21, 44 15 C49 17, 52 23, 52 29 C52 31, 50 33, 50 33 Z" fill="url(#fallbackLeafGrad)" opacity="0.85" />
+        </g>
+      </svg>
     );
   }
 
   return (
-    <div className={containerClassName}>
-      <HeartHandshake className={className} />
+    <div className={`${className} ${containerClassName} flex items-center justify-center shrink-0 overflow-hidden`}>
+      {element}
     </div>
   );
 }

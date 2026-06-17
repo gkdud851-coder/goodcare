@@ -64,7 +64,7 @@ export function Step1() {
         몇 년 생각하세요? 6개월? 1년?
       </p>
       
-      <p className="mb-6 font-semibold text-rose-600">
+      <p className="mb-6 font-semibold text-blue-600">
         그걸로 운영에 필요한 모든 걸 알 수 있을까요?<br />
         근로자와 운영자는 달라요. 완전히 다릅니다.
       </p>
@@ -81,7 +81,7 @@ export function Step1() {
         매물도 점점 사라지고 있고요. 매물이라는 게,,, 누군가 폐업을 해야 나오는 거니까요.
       </p>
       
-      <p className="mb-6 text-rose-600 font-medium">
+      <p className="mb-6 text-blue-600 font-medium">
         경력 쌓는 동안, 시장은 계속 좁아지고 있다는 겁니다.
       </p>
 
@@ -259,7 +259,7 @@ export function Step2() {
 
       <ColumnImage src="/images/2-2.jpg" alt="창업 자격 조건 분석" />
 
-      <h3 className="font-sans font-bold text-xl text-rose-600 mt-10 mb-4 border-b-2 border-gray-150 pb-2">
+      <h3 className="font-sans font-bold text-xl text-blue-600 mt-10 mb-4 border-b-2 border-gray-150 pb-2">
         정원마감의 찬란한 이면 뒤에 깊이 도사린 진짜 사유
       </h3>
       
@@ -268,7 +268,7 @@ export function Step2() {
         저희 굿케어가 상담해드린 케이스들을 돌아보면, 양도양수를 결정하시는 이유가 정말 다양합니다. 건강 문제, 갑작스러운 이사, 급한 자금 필요 같은 이유들이 있고요.
       </p>
       
-      <p className="mb-6 font-bold text-rose-600">
+      <p className="mb-6 font-bold text-blue-600">
         근데 그 중에서 의외로 적지 않게 나오는 사유가 하나 있습니다. 바로 직원 관리, 그러니까 사람을 다루는 일이 너무 힘들다는 이유입니다.
       </p>
       
@@ -334,7 +334,7 @@ export function Step2() {
         그 숫자, 맞는 이야기입니다.
       </p>
       
-      <p className="mb-6 text-rose-600 font-bold">
+      <p className="mb-6 text-blue-600 font-bold">
         근데 성향 체크, 적성 체크, 자본 체크, 그리고 그 이후에 감수해야 할 것들까지 모두 들으신 다음에 결정하셔야 하는 사업입니다.
       </p>
 
@@ -409,7 +409,7 @@ export function Step3() {
         가족이라고 해서 당연히 되는 게 아닙니다. 그 가족 구성원은 자기 삶의 방향을 바꿔서 들어오는 겁니다. 대표님이 그 희생과 결단을 정확하게 인식하고 계셔야 합니다.
       </p>
       
-      <p className="mb-6 text-rose-600 font-medium">
+      <p className="mb-6 text-blue-600 font-medium">
         그리고 동시에, 현실적인 리스크도 아셔야 합니다.
       </p>
       
@@ -442,7 +442,7 @@ export function Step3() {
         두 번째 케이스, 가족 중 한 명이 직장을 유지하며 그 월급으로 센터를 운영하는 경우
       </h3>
       
-      <p className="mb-6 font-semibold text-rose-600">
+      <p className="mb-6 font-semibold text-blue-600">
         이 케이스는 정말 굉장히 조심하셔야 합니다.
       </p>
       
@@ -485,7 +485,7 @@ export function Step3() {
         가족이 함께하는 사업일수록, 더 냉정하게 준비하셔야 합니다.
       </p>
       
-      <p className="mb-6 font-bold text-rose-600">
+      <p className="mb-6 font-bold text-blue-600">
         가족이기 때문에 대충 믿고 가도 되겠지, 가족이니까 어떻게든 되겠지 — 이 생각이 가장 위험합니다.
       </p>
       
@@ -532,13 +532,13 @@ export function Step4() {
         그런데 오늘은 양도양수를 고민하시는 분들께 꼭 드려야 할 이야기가 있습니다.
       </p>
 
-      <div className="bg-rose-50 border border-rose-100 p-5 rounded-xl my-6 font-sans">
-        <p className="font-bold text-rose-700 mb-2">⚠️ 실제로 있었던 양도양수 피해 사례</p>
+      <div className="bg-blue-50 border border-blue-100 p-5 rounded-xl my-6 font-sans">
+        <p className="font-bold text-blue-700 mb-2">⚠️ 실제로 있었던 양도양수 피해 사례</p>
         <p className="text-gray-800 leading-relaxed font-medium text-base">
           • <strong>경상북도 사례:</strong> 처음에 어르신 28명을 인수하셨는데, 몇 개월 만에 23명으로 줄었습니다.<br />
           • <strong>경기 북부 사례:</strong> 27명을 인수하셨는데, 그 중 11명이 나오지 않게 됐습니다.
         </p>
-        <p className="text-rose-600 font-semibold text-sm mt-2">
+        <p className="text-blue-600 font-semibold text-sm mt-2">
           몇 년이 아닙니다. 인수 후 불과 몇 개월 사이에 일어난 일입니다.
         </p>
       </div>
@@ -560,7 +560,7 @@ export function Step4() {
       <h4 className="font-sans font-bold text-lg text-indigo-900 mb-2">1. 등록 인원이 아니라 실제 출석 인원을 보세요</h4>
       <p className="mb-6">
         등록은 되어 있어도 건강 문제로 한 번도 나오지 못하시는 어르신들이 생각보다 꽤 많습니다. 전국 주간보호센터 평균을 봐도 마찬가지입니다.<br />
-        양도하시는 대표님과 직접 마주 앉아서, 어르신 명단 한 분 한 분의 건강 상태와 실제 출석 현황을 확인하세요. <span className="font-semibold text-rose-600">등록 인원 서류 그대로 권리금을 내시면 안 됩니다.</span>
+        양도하시는 대표님과 직접 마주 앉아서, 어르신 명단 한 분 한 분의 건강 상태와 실제 출석 현황을 확인하세요. <span className="font-semibold text-blue-600">등록 인원 서류 그대로 권리금을 내시면 안 됩니다.</span>
       </p>
 
       <h4 className="font-sans font-bold text-lg text-indigo-900 mb-2">2. 센터에 행정처분 이력이 없는지 확인하세요</h4>
@@ -655,7 +655,7 @@ export function Step5() {
         <span className="font-semibold text-indigo-900">"2개월에서 3개월 안에 오픈할 수 있을까요?"</span>
       </p>
 
-      <p className="mb-6 font-bold text-rose-600">
+      <p className="mb-6 font-bold text-blue-600">
         결론부터 말씀드리겠습니다. 건물이 이미 정해진 상태에서도 최소 4개월에서 6개월은 잡으셔야 합니다.<br />
         그리고 현실에서는 그보다 더 길어지는 경우가 훨씬 많습니다.
       </p>
@@ -698,7 +698,7 @@ export function Step5() {
       </InfoBox>
 
       <p className="mb-6 mt-4">
-        최종 승인까지 순조롭게 진행돼도 최소 6주에서 8주가 소요됩니다. 여기에 인테리어 공사 기간까지 더하면 <span className="font-bold text-rose-600">이 단계 하나만으로 90일에서 120일이 걸립니다.</span>
+        최종 승인까지 순조롭게 진행돼도 최소 6주에서 8주가 소요됩니다. 여기에 인테리어 공사 기간까지 더하면 <span className="font-bold text-blue-600">이 단계 하나만으로 90일에서 120일이 걸립니다.</span>
       </p>
       <p className="mb-6">
         특히 주간보호 경험이 없는 건축사와 처음으로 작업하는 경우, 도면 수정과 부서 협의가 반복되면서 기간이 크게 늘어납니다. 주간보호 경험이 있는 건축사와 함께하시는 걸 강하게 권해드리는 이유가 바로 이겁니다.
@@ -710,7 +710,7 @@ export function Step5() {
       <p className="mb-6">
         노유자시설은 일반 건물과 소방 기준이 다릅니다. 스프링클러 설치가 필요하고, 소화기 배치 간격도 다르고, 거동이 불편한 어르신들의 대피 동선까지 고려한 구조여야 합니다.
       </p>
-      <p className="mb-6 text-rose-600 font-medium">
+      <p className="mb-6 text-blue-600 font-medium">
         문제는 일반 임대 건물 대부분이 이 조건을 처음부터 갖추고 있지 않다는 겁니다.
       </p>
       <p className="mb-6">

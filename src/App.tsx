@@ -107,7 +107,7 @@ export default function App() {
         
         {/* 로고 영역 */}
         <div className="flex items-center gap-2.5 mb-8">
-          <Logo className="w-6 h-6" containerClassName="bg-rose-500 p-2.5 rounded-full text-white shadow-md flex items-center justify-center shrink-0" />
+          <Logo className="w-11 h-11" containerClassName="p-1.5 bg-blue-100 rounded-full text-blue-600 shadow-sm flex items-center justify-center shrink-0 border border-blue-200" />
           <span className="font-extrabold text-xl tracking-tight text-slate-900">굿케어</span>
         </div>
 
@@ -118,9 +118,9 @@ export default function App() {
           </h1>
           <a
             href="tel:1522-3133"
-            className="inline-flex items-center gap-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-extrabold px-5 py-3 rounded-xl border border-rose-100 transition-colors text-lg"
+            className="inline-flex items-center gap-2 bg-blue-50 hover:bg-blue-100 text-blue-600 font-extrabold px-5 py-3 rounded-xl border border-blue-100 transition-colors text-lg"
           >
-            <Phone className="w-5 h-5 fill-rose-600/10" />
+            <Phone className="w-5 h-5 fill-blue-600/10" />
             1522-3133 (내선 1번)
           </a>
         </div>
@@ -138,8 +138,8 @@ export default function App() {
                 onClick={() => handleSelectArticle("step-intro")}
                 className={`w-full text-left flex items-center justify-between px-4 py-3 rounded-xl font-bold transition-all border ${
                   activeTab === "step-intro"
-                    ? "bg-rose-500 text-white border-rose-500 shadow-sm"
-                    : "bg-slate-50 text-slate-700 border-transparent hover:bg-rose-50/50 hover:text-rose-600 hover:border-rose-100"
+                    ? "bg-blue-600 text-white border-blue-600 shadow-sm"
+                    : "bg-slate-50 text-slate-700 border-transparent hover:bg-blue-50/50 hover:text-blue-600 hover:border-blue-100"
                 }`}
               >
                 <div className="flex items-center gap-2">
@@ -164,7 +164,7 @@ export default function App() {
                       className="w-full text-left flex items-center justify-between px-4 py-3.5 rounded-xl font-bold transition-all border duration-200 text-[15px] bg-slate-50 text-slate-700 border-transparent hover:bg-blue-50/50 hover:text-blue-600 hover:border-blue-100"
                     >
                       <span className="truncate pr-2">{item.title}</span>
-                      <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-70 text-rose-500" />
+                      <ChevronRight className="w-4 h-4 flex-shrink-0 opacity-70 text-blue-500" />
                     </a>
                   </li>
                 );
@@ -200,15 +200,15 @@ export default function App() {
                onClick={() => handleSelectArticle("step-intro")}
                className="flex items-center gap-1.5 text-slate-800"
             >
-              <Logo className="w-6 h-6" containerClassName="text-rose-500 flex items-center justify-center shrink-0" />
+              <Logo className="w-9 h-9" containerClassName="bg-blue-50 p-1 rounded-full border border-blue-100/50" />
               <span className="font-extrabold text-base tracking-tight select-none">굿케어</span>
             </button>
             
             <a
               href="tel:1522-3133"
-              className="flex items-center gap-1.5 text-xs text-rose-600 font-extrabold border border-rose-200 bg-rose-50/50 px-3 py-1.5 rounded-full transition-colors"
+              className="flex items-center gap-1.5 text-xs text-blue-600 font-extrabold border border-blue-200 bg-blue-50/50 px-3 py-1.5 rounded-full transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 fill-rose-600/10" />
+              <Phone className="w-3.5 h-3.5 fill-blue-600/10" />
               1522-3133
             </a>
           </header>
@@ -217,7 +217,7 @@ export default function App() {
           {activeTab !== "step-intro" && (
             <div className="w-full h-1.5 bg-slate-100 z-30 pointer-events-none shrink-0 relative">
               <div 
-                className="h-full bg-rose-500 rounded-r-full transition-all duration-100 shadow-[0_1px_3px_rgba(244,63,94,0.3)]" 
+                className="h-full bg-blue-600 rounded-r-full transition-all duration-100 shadow-[0_1px_3px_rgba(37,99,235,0.3)]" 
                 style={{ width: `${scrollPercent}%` }} 
               />
             </div>
@@ -277,7 +277,7 @@ export default function App() {
                     exit={{ opacity: 0, scale: 0.9, y: 10 }}
                     className="relative z-20 mb-3.5 w-64 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_12px_36px_rgba(30,27,75,0.22)] border border-white/45 p-4 flex flex-col gap-2.5"
                   >
-                    <div className="text-[11px] font-black tracking-wide text-rose-500 uppercase px-1">
+                    <div className="text-[11px] font-black tracking-wide text-blue-600 uppercase px-1">
                       ⚡ 굿케어 전문가 빠른 상담
                     </div>
                     
@@ -302,13 +302,13 @@ export default function App() {
                     <a
                       href="tel:1522-3133"
                       onClick={() => setIsInquiryOpen(false)}
-                      className="flex items-center gap-3.5 p-3.5 bg-rose-50/70 hover:bg-rose-100/90 text-rose-950 rounded-xl transition-all border border-rose-100/40 group backdrop-blur-xs"
+                      className="flex items-center gap-3.5 p-3.5 bg-blue-50/70 hover:bg-blue-100/90 text-blue-950 rounded-xl transition-all border border-blue-100/40 group backdrop-blur-xs"
                     >
-                      <div className="p-2.5 bg-rose-500/90 text-white rounded-lg shadow-sm">
+                      <div className="p-2.5 bg-blue-600/90 text-white rounded-lg shadow-sm">
                         <Phone className="w-4 h-4 fill-white/10" />
                       </div>
                       <div className="flex flex-col text-left">
-                        <span className="text-sm font-black group-hover:text-rose-600 transition-colors">1522-3133 전화연결</span>
+                        <span className="text-sm font-black group-hover:text-blue-600 transition-colors">1522-3133 전화연결</span>
                         <span className="text-[11px] text-slate-500 font-bold mt-0.5">굿케어 가맹 문의 (내선 1번)</span>
                       </div>
                     </a>
@@ -321,7 +321,7 @@ export default function App() {
             <button
               id="floatingInquiryBtn"
               onClick={() => setIsInquiryOpen(!isInquiryOpen)}
-              className="flex items-center justify-center w-12 h-12 bg-rose-500/95 hover:bg-rose-600 backdrop-blur-md active:scale-95 text-white rounded-full shadow-[0_8px_20px_rgba(244,63,94,0.35)] transition-all cursor-pointer relative border border-white/10"
+              className="flex items-center justify-center w-12 h-12 bg-blue-600/95 hover:bg-blue-700 backdrop-blur-md active:scale-95 text-white rounded-full shadow-[0_8px_20px_rgba(37,99,235,0.35)] transition-all cursor-pointer relative border border-white/10"
             >
               <Phone className="w-5 h-5 fill-white/10" />
             </button>
@@ -386,7 +386,7 @@ export default function App() {
                       onClick={() => handleSelectArticle("step-intro")}
                       className={`w-full text-left flex items-center justify-between px-4 py-3.5 rounded-2xl font-bold border transition ${
                         activeTab === "step-intro"
-                          ? "bg-rose-500 text-white border-rose-500"
+                          ? "bg-blue-600 text-white border-blue-600 shadow-md"
                           : "bg-slate-50 text-slate-700 border-transparent hover:bg-slate-100"
                       }`}
                     >
@@ -409,7 +409,7 @@ export default function App() {
                             className="w-full text-left flex items-center justify-between px-4 py-3.5 rounded-2xl font-bold border transition duration-150 bg-slate-50 text-slate-700 border-transparent hover:bg-slate-100"
                           >
                             <span className="text-[14px] truncate pr-2">{item.title}</span>
-                            <ChevronRight className="w-4 h-4 flex-shrink-0 text-rose-500" />
+                            <ChevronRight className="w-4 h-4 flex-shrink-0 text-blue-500" />
                           </a>
                         );
                       }
