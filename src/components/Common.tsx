@@ -1,4 +1,35 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
+import { HeartHandshake } from "lucide-react";
+
+const logoSources = [
+  "/images/logo.png",
+  "/images/로고.png",
+  "/images/logo.jpg",
+  "/images/logo.svg",
+  "/logo.png"
+];
+
+export function Logo({ className = "w-6 h-6", containerClassName = "bg-rose-500 p-2 rounded-full text-white shadow-md flex items-center justify-center shrink-0" }: { className?: string; containerClassName?: string }) {
+  const [logoIndex, setLogoIndex] = useState(0);
+
+  if (logoIndex < logoSources.length) {
+    return (
+      <img
+        src={logoSources[logoIndex]}
+        alt="굿케어 로고"
+        onError={() => setLogoIndex(prev => prev + 1)}
+        className={`${className} object-contain rounded-full`}
+        referrerPolicy="no-referrer"
+      />
+    );
+  }
+
+  return (
+    <div className={containerClassName}>
+      <HeartHandshake className={className} />
+    </div>
+  );
+}
 
 // 형광펜 스타일 하이라이트
 export function Highlight({ children }: { children: ReactNode }) {

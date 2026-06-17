@@ -132,47 +132,88 @@ export function Step6() {
 }
 
 // 7. 노유자시설 1000만원을 아낀다고?
+import React from 'react';
+
 export function Step7() {
   return (
-    <article className="font-serif text-[#333] text-[19px] leading-[1.85] py-4">
-      <h2 className="font-sans font-extrabold text-2xl text-[#1a365d] mb-6 tracking-tight">
-        7. 노유자시설 1000만원을 아낀다고?
+    <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
+      <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
+        7. 노유자시설 1,000만 원을 아낀다고?
       </h2>
-      <p className="mb-6">안녕하세요 장기요양기관 전문가 집단, 굿케어 대표 천천박사입니다.</p>
-      <p className="mb-6">노유자시설? 아마 살면서 처음 들어보는 분들도 많을겁니다. 어쩌면 장기요양기관 창업을 준비하시면서 듣게 되신 용어 일 수도 있을 것 같아요.</p>
+      
+      <p className="mb-6">
+        안녕하세요 장기요양기관 전문가 집단, 굿케어 대표 천천박사입니다.
+      </p>
+      
+      <p className="mb-6">
+        노유자시설? 아마 살면서 처음 들어보는 분들도 많을 겁니다.<br />
+        어쩌면 장기요양기관 창업을 준비하시면서 듣게 되신 용어 일 수도 있을 것 같아요.
+      </p>
+      
+      <p className="mb-6">
+        창업을 준비하시는 많은 대표님들이, 많은 시간은 할애하는 단계가 '임장'입니다.<br />
+        입지가 괜찮으면서도, 노유자시설에 가까운, 내가 원하는 평수를 찾는 것에 많은 시간을 할애하시는데요.
+      </p>
       
       <ColumnImage src="/images/7-1.jpg" alt="노유자시설 현황" />
 
-      <p className="mb-6">창업을 준비하시는 많은 대표님들이, 많은 시간은 할애하는 단계가 '임장'입니다. 입지가 괜찮으면서도, 노유자시설에 가까운, 내가 원하는 평수를 찾는 것에 많은 시간을 할애하시는데요.</p>
-      <p className="mb-6 font-semibold">왜 그럴까 곰곰히 생각해보면, 노유자시설 용도변경 투자금액이 만만치 않기 때문입니다.</p>
-      <p className="mb-6">기본 소방시설은 물론, 병원, 의원 수준에 근접할 정도로 각종 시설들을 갖추어야 하기에 공사비용이 정말 만만치 않습니다.</p>
+      <p className="mb-6 font-medium text-slate-800">
+        왜 그럴까 곰곰이 생각해보면, 노유자시설 용도변경 투자금액이 만만치 않기 때문입니다.
+      </p>
+      
+      <p className="mb-6">
+        기본 소방시설은 물론, 병원, 의원 수준에 근접할 정도로 각종 시설들을 갖추어야 하기에 공사비용이 정말 만만치 않습니다.
+      </p>
+      
+      <p className="mb-6 font-bold text-rose-600">
+        그래서일까요? 주간보호 임대 매물을 찾으실 때, 뒤도 돌아보지 말고 나와야하는 7가지 체크사항이 있다고 합니다.
+      </p>
+      
+      <p className="mb-6">
+        처음은 힘드시겠지만, 많이 다녀보시면 보실수록, 매물을 보는 안목과 식견이 생길 거라 믿습니다.<br />
+        굿케어가 무료로 배포해드린 임장 체크리스트만 가져다니시면서 체크해보셔도 큰 도움이 되실 거예요.
+      </p>
 
       <ColumnImage src="/images/7-2.jpg" alt="소방 시설 설계" />
 
-      <p className="mb-6 font-bold text-rose-600">그래서일까요? 주간보호 임대 매물을 찾으실 때, 뒤도 돌아보지 말고 나와야하는 7가지 체크사항이 있다고 합니다.</p>
-      <p className="mb-6">처음은 힘드시겠지만, 많이 다녀보시면 보실수록, 매물을 보는 안목과 식견이 생길거라 믿습니다.</p>
-      <p className="mb-6">굿케어가 무료로 배포해드린 임장 체크리스트만 가져다니시면서 체크해보셔도 큰 도움이 되실거에요.</p>
-
-      <ColumnImage src="/images/7-3.jpg" alt="임장 체크리스트" />
-
-      <p className="mb-6">노유자시설에 근접한 임대물건만 찾으면 뭐 얼마나 절감되는지 궁금하실 것 같습니다. 매물에 따라 다르겠지만 <Highlight>평균 1,000만원 이상의 비용이 절약</Highlight> 될것으로 예상되오니, 해당 체크리스트를 잘 활용하셨으면 좋겠네요.</p>
-      <p className="mb-6 text-gray-700">그 전에 잠깐, 예비 대표님들께 꼭 드리고 싶은 말씀이 있습니다. 노유자시설 용도변경에 필요한 7가지를 보기 전, 그보다 더 중요한 원칙 하나가 있습니다.</p>
+      <p className="mb-6">
+        노유자시설에 근접한 임대물건만 찾으면 뭐 얼마나 절감되는지 궁금하실 것 같습니다.<br />
+        매물에 따라 다르겠지만 <Highlight>평균 1,000만 원 이상의 비용이 절약</Highlight> 될 것으로 예상되오니, 해당 체크리스트를 잘 활용하셨으면 좋겠네요.
+      </p>
+      
+      <p className="mb-6 text-slate-900 font-semibold">
+        그 전에 잠깐, 예비 대표님들께 꼭 드리고 싶은 말씀이 있습니다. 노유자시설 용도변경에 필요한 7가지를 보기 전, 그보다 더 중요한 원칙 하나가 있습니다.
+      </p>
 
       <WarningQuote>
-        첫번째 핵심 원칙, 소규모는 시작도 하지 마세요!
+        첫 번째, 소규모는 시작도 하지 마세요
       </WarningQuote>
 
-      <p className="mb-6">보고자 하시는 매물이 얼마나 노유자시설에 가까운지는 중요하지 않습니다. 제일 중요한건 수익구조 파악입니다.</p>
-      <p className="mb-6">주간보호센터의 수익구조는 국가에서 정해준 고시 비용만을 받을 수 있으며, 정원에 따라 수익이 산정되는 국가사업입니다.</p>
-      <p className="mb-6 font-medium">예전에는 9인, 16인 사업들도 나름대로의 사업성이 있었지만, 요즘은 물가상승으로 인해 인건비, 운영비의 상승이 매우 높아지고 있습니다. 매출은 한정되어있는데, 지출만 늘어나게 되는 구조는 물론, 소규모 센터는 공단의 정책 변경에 갈대와 같이 흔들릴 수 밖에 없습니다.</p>
+      <p className="mb-6">
+        보고자 하시는 매물이 얼마나 노유자시설에 가까운지는 중요하지 않습니다. 제일 중요한 건 수익구조 파악입니다.
+      </p>
+      
+      <p className="mb-6">
+        주간보호센터의 수익구조는 국가에서 정해준 고시 비용만을 받을 수 있으며, 정원에 따라 수익이 산정되는 국가사업입니다.
+      </p>
+      
+      <p className="mb-6">
+        예전에는 9인, 16인 사업들도 나름대로의 사업성이 있었지만, 요즘은 물가상승으로 인해 인건비, 운영비의 상승이 매우 높아지고 있습니다.<br />
+        매출은 한정되어있는데, 지출만 늘어나게 되는 구조는 물론, 소규모 센터는 공단의 정책 변경에 갈대와 같이 흔들릴 수밖에 없습니다.
+      </p>
 
-      <ColumnImage src="/images/7-4.jpg" alt="규모의 경제성 확보" />
+      <ColumnImage src="/images/7-4.jpg" alt="규모의 경제성 확보" caption="굿케어 직영. 90인 정원 스마트재활 8년차 센터" />
 
-      <p className="mb-6 font-semibold">22년, 지금으로부터 약 4년전에는 무조건 80평 이상은 하셔야 한다고 말씀드렸는데, 현재 기준으로는 최소 120평 이상은 해주셔야 안전합니다.</p>
-      <p className="mb-6">만약 시설장을 두고 돌릴 생각이시라면, 시설장 급여까지 생각해, 조금 더 넉넉한 정원을 확보하셔야겠지요.</p>
+      <p className="mb-6 font-bold text-indigo-900">
+        22년, 지금으로부터 약 4년 전에는 무조건 80평 이상은 하셔야 한다고 말씀드렸는데, 현재 기준으로는 최소 120평 이상은 해주셔야 안전합니다.
+      </p>
+      
+      <p className="mb-6">
+        만약 시설장을 두고 돌릴 생각이시라면, 시설장 급여까지 생각해, 조금 더 넉넉한 정원을 확보하셔야겠지요.
+      </p>
 
       <h3 className="font-sans font-bold text-xl text-[#2b6cb0] mt-10 mb-4 border-b-2 border-gray-150 pb-2">
-        두번째, 7가지 확인하세요 (노유자 7대 임장 체크리스트)
+        두 번째, 7가지 확인하세요
       </h3>
 
       <div className="flex flex-col gap-8 my-8 font-sans text-base">
@@ -180,167 +221,271 @@ export function Step7() {
         <div className="border border-gray-100 bg-white p-5 rounded-lg shadow-sm">
           <h4 className="font-extrabold text-[#2b6cb0] text-lg mb-2">1. 출입구 점자블록 경사로 유무</h4>
           <p className="text-gray-700 leading-relaxed mb-3">
-            임대하고자 하는 건물 출입구에, 점자블록과 경사로가 설치되어 있다면, 임장 해볼 가치가 높은 건물입니다.
+            임대하고자 하는 건물 출입구에, 점자블록이 설치되어 있다면, 임장 해볼 가치가 있는 건물입니다.
           </p>
-          <div className="max-w-md"><img src="/images/7-8.jpg" alt="점자블록 경사로" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-8.jpg" alt="출입구 점자블록 경사로 유무 확인" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 2 */}
         <div className="border border-gray-100 bg-white p-5 rounded-lg shadow-sm">
           <h4 className="font-extrabold text-[#2b6cb0] text-lg mb-2">2. 장애인 주차장 유무</h4>
           <p className="text-gray-700 leading-relaxed mb-3">
-            또한 그 외에 장애인 주차장 또한 갖추어져있다면, 소방/건축 승인 가능성은 더욱 커지는데요. 만약 장애인 주차장이 없다면, 필수적으로 만드셔야 합니다. 있는 경우에도 규정변경이 많이 바뀌고 있어서 보완 해야 할 가능성이 큽니다.
+            또한 그 외에 장애인 주차장 또한 갖추어져있다면, 그럴 가능성은 더욱 커지는데요. 만약 장애인 주차장이 없다면, 필수적으로 만드셔야 합니다. 있는 경우에도 규정변경도 많이 바뀌고 있어서 보완 해야 할 가능성이 큽니다.
           </p>
-          <div className="max-w-md"><img src="/images/7-9.jpg" alt="장애인 주차장" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-9.jpg" alt="장애인 주차장 유무" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 3 */}
         <div className="border border-gray-100 bg-white p-5 rounded-lg shadow-sm">
           <h4 className="font-extrabold text-[#2b6cb0] text-lg mb-2">3. 피난계단</h4>
           <p className="text-gray-700 leading-relaxed mb-3">
-            임대하고자 하는 건물이 3층 이상이라면, 피난 계단이 2개 이상은 있으셔야 법적인 승인이 도출됩니다.
+            임대하고자 하는 건물이 3층 이상이라면, 피난 계단도 2개 이상은 있으셔야 합니다.
           </p>
           <div className="max-w-md"><img src="/images/7-10.jpg" alt="피난계단" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 4 */}
         <div className="border border-gray-100 bg-white p-5 rounded-lg shadow-sm">
-          <h4 className="font-extrabold text-[#2b6cb0] text-lg mb-2">4. 소화전 스프링쿨러 유무 확인</h4>
+          <h4 className="font-extrabold text-[#2b6cb0] text-lg mb-2">4. 소화전 스프링클러 유무 확인</h4>
           <p className="text-gray-700 leading-relaxed mb-3">
-            소방시설이 되어있어도, 스프링쿨러 증이설은 추가로 들어가야 하는 경우가 많습니다. 노유자 시설 용도변경에 있어, 가장 많은 비용이 들어가다보니, 내부까지 들어가셨다면 필수적으로 잘 확인하셔야겠습니다.
+            소방시설이 되어있어도, 스프링클러 증이설은 추가로 들어가야 하는 경우가 많습니다. 노유자 시설 용도변경에 있어, 가장 많은 비용이 들어가다보니, 내부까지 들어가셨다면 필수적으로 잘 확인하셔야겠습니다.
           </p>
-          <div className="max-w-md"><img src="/images/7-11.jpg" alt="스프링쿨러 시설" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-11.jpg" alt="소화전 스프링쿨러 유무 확인" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 5 */}
         <div className="border border-gray-100 bg-white p-5 rounded-lg shadow-sm">
           <h4 className="font-extrabold text-[#2b6cb0] text-lg mb-2">5. 배연창 확인</h4>
           <p className="text-gray-700 leading-relaxed mb-3">
-            배연창은 화재시, 자동으로 열리는 통풍창을 말합니다. 많이 헷갈려 하시는데 2층이상 복지동 건물은 배연창이 필수적입니다.
+            배연창은 화재시, 자동으로 열리는 창문을 말합니다. 많이 헷갈려 하시는데 2층이상은 배연창이 필수입니다.
           </p>
-          <div className="max-w-md"><img src="/images/7-12.jpg" alt="배연창" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-12.jpg" alt="배연창 확인" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 6 */}
         <div className="border border-gray-100 bg-white p-5 rounded-lg shadow-sm">
           <h4 className="font-extrabold text-[#2b6cb0] text-lg mb-2">6. 건축물대장, 내진설계</h4>
           <p className="text-gray-700 leading-relaxed mb-3">
-            정부24에 들어가시면 건축물대장을 쉽게 무료 발급받을 수 있습니다. 내진설계가 이미 완비된 건물인지 사전에 확인하셔야 지정 서류 통과가 수월합니다.
+            정부 24에 들어가시면 건축물대장을 발급받을 수 있습니다. 내진설계가 되어있는지도 확인하셔야겠습니다.
           </p>
-          <div className="max-w-md"><img src="/images/7-13.jpg" alt="내진설계 확인" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-13.jpg" alt="건축물대장, 내진설계" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 7 */}
         <div className="border border-gray-100 bg-white p-5 rounded-lg shadow-sm">
           <h4 className="font-extrabold text-[#2b6cb0] text-lg mb-2">7. 장애인 화장실</h4>
           <p className="text-gray-700 leading-relaxed mb-3">
-            마지막은 장애인 화장실입니다. 꼭 센터 내부에 있어야하는건 아닙니다. 임대층 공유 화도 사용이 가능하긴 하지만, 대부분 내부에도 만드시긴 하지요.
+            마지막은 장애인 화장실입니다. 꼭 센터 내부에 있어야하는건 아닙니다. 임대층에 있다면 사용이 가능하지만, 대부분 만드시긴 하지요.
           </p>
           <div className="max-w-md"><img src="/images/7-14.jpg" alt="장애인 화장실" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
       </div>
 
-      <p className="mb-6">그 외에도 많은 부분들이 있지만, 이 7가지 정도만 보셔도 충분히 수천만 원 가량의 낭비를 원천 차단하실 수 있으리라 믿습니다.</p>
+      <p className="mb-6 font-medium">
+        그 외에도 많은 부분들이 있지만, 7가지 정도만 보셔도 충분 하시리라 믿습니다.
+      </p>
 
-      <h3 className="font-sans font-bold text-xl text-[#e53e3e] mt-10 mb-4 border-b-2 border-gray-150 pb-2">
-        세번째, 공사판에 나오지 마세요
+      <h3 className="font-sans font-bold text-xl text-[#1a365d] mt-10 mb-4 border-b-2 border-gray-150 pb-2">
+        세 번째, 공사판에 나오지 마세요
       </h3>
-      <p className="mb-6 font-bold">마지막 세 번째는, 공사현장에 나오시지 말라고 말씀드리고 싶습니다. 모든 것들을 대표님이 관할하려고 하지 마세요.</p>
-      <p className="mb-6">그러기 위해선 진짜 전문가를 만나시기 위해, 전문가를 찾아 나서는 시간을 할애 하셔야 할 것 같습니다.</p>
+      
+      <p className="mb-6">
+        마지막 세 번째는, 공사현장에 나오시지 말라고 말씀드리고 싶습니다. 모든 것들을 대표님이 관할하려고 하지 마세요.<br />
+        그러기 위해선 진짜 전문가를 만나시기 위해, 전문가를 찾아 나서는 시간을 할애 하셔야 할 것 같습니다.
+      </p>
       
       <ColumnImage src="/images/7-6.jpg" alt="인테리어 현장 실무 배제" />
 
-      <p className="mb-6 font-medium text-gray-800">왜 공사현장에 나오지말라하냐면, 대표님이 하셔야 하는 것은 딱 2가지 입니다.</p>
+      <p className="mb-6 font-medium text-slate-800">
+        왜 공사현장에 나오지말라하냐면, 대표님이 하셔야 하는 것은 딱 2가지 입니다.
+      </p>
 
-      <InfoBox title="대표님이 집중하셔야 할 실제 행동 요령">
-        <ol className="list-decimal pl-5 flex flex-col gap-2 font-sans font-medium text-[17px] text-[#78350f]">
-          <li>노유자시설에 근접한 매물을 찾기 위한 부동산 손품팔기, 발품팔기 (이를 통해 최소 1,000만원 비용 즉각 세이브)</li>
-          <li>노유자시설이 정해졌다면, 구획설계 및 인테리어 설계, 용도변경 기간 동안 대표님은 현장에 매달리는 대신 사람들을 만나 수급자를 모으셔야 합니다.</li>
-        </ol>
-      </InfoBox>
+      <div className="bg-slate-50 border border-slate-100 p-5 rounded-xl my-6 font-sans">
+        <ul className="list-disc pl-5 flex flex-col gap-2 text-gray-800 font-medium text-base">
+          <li>노유자시설에 근접한 매물을 찾기 위한 부동산 손품팔기, 발품팔기, 이것을 통해 최소 1,000만 원을 아껴가시면 되는 겁니다.</li>
+          <li>노유자시설이 정해졌다면, 구획설계 및 인테리어 설계, 용도변경시, 대표님은 사람들을 만나셔야 합니다.</li>
+        </ul>
+      </div>
 
-      <p className="mb-6 text-rose-600 font-bold">최소 5명만 미리 모으셔도, 그 어떠한 것들을 하는 것보다 수많은 매월 수백만 원 공실 비용을 완벽 절감하실 수 있습니다.</p>
-      <p className="mb-6">센터가 오픈한다고해서 자동으로 사람이 몰려들거란 생각은 하지 않는게 좋습니다. 대표님이 직접 뛰셔야 합니다. 지금 밖에 뛰어다니실 기회비용 시간이 없습니다.</p>
-      <p className="mb-6">시설장으로 근무를 시작하시면 센터 초반에는 직원들 채용하고 관리하고 배치하고, 상담하고, 센터 불을 켜고 문을 닫고 나오는 바쁜 일과로도 하루가 절대 모자를겁니다.</p>
-      <p className="mb-6 font-bold text-[#2b6cb0]">그러니 대표님이 하셔야 할 것은 진짜 일할 수 있는 전문가를 찾는 것이며, 괜찮은 노유자시설 점검에만 힘쓰시는 이 2가지뿐입니다.</p>
+      <p className="mb-6 font-bold text-rose-600">
+        최소 5명만 모으셔도, 그 어떠한 것을 하시는 것보다 수많은 비용을 절감하실 수 있습니다.
+      </p>
+      
+      <p className="mb-6">
+        센터가 오픈한다고해서 사람이 몰려들거란 생각은 하지 않는게 좋습니다. 대표님이 뛰어다니셔야 합니다. 지금 밖에 뛰어다니실 시간이 없습니다.
+      </p>
+      
+      <p className="mb-6">
+        시설장으로 근무를 시작하시면 센터 초반, 직원들 채용하고 관리하고 배치하고, 상담하고, 센터 불을 키고 문을 닫고 나오는 일과로도 하루가 모자를겁니다.
+      </p>
+      
+      <p className="mb-6 font-bold text-indigo-900">
+        그러니 대표님이 하셔야 할 건, 진짜 전문가를 찾는 보는 일, 괜찮은 노유자시설을 찾아보는 일, 이 2가지입니다.
+      </p>
 
       <ColumnImage src="/images/7-7.jpg" alt="전문 파트너십 구축" />
 
-      <p className="mb-6">굿케어는 예비 대표님들을 위해 유튜브 공헌사업과 네이버카페 공헌사업, 블로그 운영 공헌사업, 무료상담 30분 제공 사업을 진행하고 있습니다.</p>
-      <p className="mb-6 font-semibold">잠에서 깨어 기지개를 켜고, 몸을 풀어간다는 생각으로 급하지 않게 천천히, 정확히 나아가셨으면 좋겠습니다.</p>
-      <p className="mb-6">모든 대표님들을 주체적으로 응원하고, 일생일대 누구나 받을 수 있는 30분 무료상담 컨설팅 현장에서 편히 만나뵙도록 하겠습니다. 감사합니다.</p>
+      <p className="mb-6">
+        굿케어는 예비 대표님들을 위해 유튜브 공헌사업과 네이버카페 공헌사업, 블로그 운영 공헌사업, 무료상담 30분 제공 사업을 진행하고 있습니다.
+      </p>
+      
+      <p className="mb-6 font-medium text-teal-800 bg-teal-50 p-4 rounded-xl border border-teal-100">
+        잠에서 깨어 기지개를 키고, 몸을 풀어간다는 생각으로 급하지 않게 천천히, 정확히 나아가셨으면 좋겠습니다.
+      </p>
+      
+      <p className="mb-6">
+        모든 대표님들을 응원하고, 일생일대 누구나 받을 수 있는 30분 무료상담 컨설팅에서 만나뵙도록 하겠습니다.
+      </p>
+      
+      <p className="mb-6 font-bold text-center text-indigo-900 border-t border-gray-100 pt-6 mt-8">
+        감사합니다.
+      </p>
     </article>
   );
 }
 
 // 8. 구조설계, 인테리어시 조심해야 할 것
+import React from 'react';
+
 export function Step8() {
   return (
-    <article className="font-serif text-[#333] text-[19px] leading-[1.85] py-4">
-      <h2 className="font-sans font-extrabold text-2xl text-[#1a365d] mb-6 tracking-tight">
+    <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
+      <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
         8. 구조설계, 인테리어시 조심해야 할 것
       </h2>
-      <p className="mb-6">안녕하세요. 장기요양 창업·경영지원 1등 굿케어입니다. 반갑습니다.^^</p>
-      <p className="mb-6 font-medium">본 글에 앞서 굿케어를 먼저 소개 드리자면 12년간 전국 1,400여 장기 요양, 사회서비스 기관들을 대상으로 창업, 경영지원 및 교육하고 현재 굿케어 창업지원 서비스를 통해 예비 창업자분들의 고민, 불편함을 전폭 개선하고 있습니다.</p>
+      
+      <p className="mb-6">
+        안녕하세요. 장기요양 창업·경영지원 1등 굿케어입니다. 반갑습니다.^^
+      </p>
+      
+      <p className="mb-6">
+        본 글에 앞서 굿케어를 먼저 소개 드리자면 12년간 전국 1,400여 장기 요양, 사회서비스 기관들을 대상으로 창업, 경영지원 및 교육하고 현재 굿케어 창업지원 서비스를 통해 예비 창업자분들의 고민, 불편함을 개선하고 있습니다.
+      </p>
       
       <ColumnImage src="/images/8-1.jpg" alt="장기요양 세미나 전경" caption="장기요양 강연 현장과 굿케어의 오늘" />
 
-      <p className="mb-6">장기요양 기관들을 지원한 12년 동안 저희는 수천 명에 달하는 고객분들을 만나왔습니다. 그러면서 가장 충격적이었던 것은 생각보다 많은 고객분들께서 온라인, 오프라인에서 잘못된 홍보 정보에 잘 속는다는 것이었습니다.</p>
-      <p className="mb-6">어쩌면 누군가 저희를 질책할 수도 있지만, 오늘 우리는 이러한 부조리를 바로잡고자 합니다.</p>
-      <p className="mb-6 font-bold text-indigo-900 border-b border-indigo-200 inline">저희의 굿케어 창업 지원 서비스를 이용하시는 예비 대표님들께서는 잘못된 정보에 속아 소중한 시간과 수억 원의 돈을 낭비하는 일이 없으셨으면 좋겠습니다.</p>
-      <p className="mb-6 mt-4">오늘은 정직하고 진실된 장기요양 창업 정보를 알아볼 수 있는 2가지 방법을 12년 현업 경험을 바탕으로 엄밀히 말씀드리도록 하겠습니다. 이 글이 여러분에게 조금이나마 도움이 되기를 바랍니다.</p>
+      <p className="mb-6">
+        장기요양 기관들을 지원한 7년 동안 저희는 3천 명에 달하는 고객분들을 만나왔습니다. 그러면서 가장 충격적이었던 것은 생각보다 많은 고객분들께서 온라인, 오프라인에서 잘못된 정보에 잘 속는다는 것이었습니다.
+      </p>
+      
+      <p className="mb-6 font-semibold text-rose-600">
+        어쩌면 누군가 저희를 질책할 수도 있지만, 오늘 우리는 이러한 부조리를 바로잡고자 합니다.
+      </p>
+      
+      <p className="mb-6">
+        저희의 굿케어 창업 지원 서비스를 이용하시는 예비 대표님들께서는 잘못된 정보에 속아 시간과 돈을 낭비하는 일이 없으셨으면 좋겠습니다.
+      </p>
+      
+      <p className="mb-6">
+        오늘은 정직하고 진실된 장기요양 창업 정보를 알아볼 수 있는 2가지 방법을 7년 경험을 바탕으로 말씀드리도록 하겠습니다. 이 글이 여러분에게 조금이나마 도움이 되기를 바랍니다.
+      </p>
 
       <ColumnImage src="/images/8-2.jpg" alt="본점 어르신 요양 모습" caption="굿케어 주간보호센터 본점 어르신들의 활동 모습" />
 
       <h3 className="font-sans font-bold text-xl text-[#2b6cb0] mt-10 mb-4 border-b-2 border-gray-150 pb-2">
-        첫 번째, 설계사는 다 아는 줄 알았어요
+        첫 번째, 설계사는 다 아는 줄 알았어요.
       </h3>
-      <p className="mb-6">노유자 변경은 일반 설계사라면 누구나 가능하겠지만, <Highlight>주간보호 설립 실제 경험이 없다면 세부 시설 및 설비 행정 기준을 심하게 놓치는 경우</Highlight>가 다수 발생됩니다.</p>
       
-      <ColumnImage src="/images/8-3.jpg" alt="주간보호 센터 설계" caption="주간보호센터 설립 기준 중 일부 예시 도면" />
+      <p className="mb-6">
+        노유자 변경은 설계사라면 누구나 가능하겠지만 <Highlight>주간보호 설립 경험이 없다면 시설 및 설비 기준을 놓치는 경우</Highlight>가 발생합니다.
+      </p>
+      
+      <ColumnImage src="/images/8-3.jpg" alt="주간보호 센터 설계" caption="주간보호센터 설립 기준 중 일부" />
 
-      <p className="mb-6">무조건 정원을 많이 받기 위해 편의용 사무실이나 프로그램실을 극단으로 줄이거나, 정원 비례 인력 배치 기준에 대한 온전한 이해도가 없을 경우 실제 지정 실사와 준공 후 사용 시 막대한 법적 패널티 문제가 발생됩니다.</p>
-      <p className="mb-6 font-semibold">주간보호센터 설계는 한정된 내부 공간에서 최대한의 정원(수급인원)을 안전하게 받을 수 있으면서도, 어르신의 송영동선과 낙상예방 안전, 선생님들의 근무 동선과 서비스 제공 공간이 기밀하게 조율 확보되어야 합니다.</p>
-      <p className="mb-6 text-rose-600 font-bold">잘못 설계한 시설의 경우, 어르신의 낙상 골절 사고, 피난유도 불능 사태는 물론 직원들의 실 고충 처리 공간 부족으로 인지적 공간 침해가 되어 장기 요양 공단의 평가 시에 큰 감점 요소가 됩니다.</p>
+      <p className="mb-6">
+        무조건 정원을 많이 받기 위해 사무실, 프로그램실을 줄이거나 정원 비례 인력 구성에 대한 이해도가 없을 경우 실사용에서 문제가 됩니다.
+      </p>
+      
+      <p className="mb-6 font-medium text-slate-800">
+        주간보호센터 설계는 한정된 공간에서 최대한의 정원을 받을 수 있으면서도 어르신의 동선과 안전, 선생님들의 동선과 서비스 공간이 적절히 확보되어야 합니다.
+      </p>
+      
+      <p className="mb-6 text-rose-600 font-bold">
+        잘못된 설계의 경우 어르신의 낙상 사고, 직원들의 업무공간 부족으로 어르신들의 공간을 사용하게 됨으로써 장기 요양 공단 모니터링, 평가 시에 문제가 발생됩니다.
+      </p>
 
-      <ColumnImage src="/images/8-4.jpg" alt="인력 기준 분석 자료" caption="주간보호센터 필수 종사자 배치 기준" />
+      <ColumnImage src="/images/8-4.jpg" alt="인력 기준 분석 자료" caption="주간보호센터 인력기준 중 일부" />
 
-      <p className="mb-6">공간의 세심하고 바른 설계만으로도 운영 효율 극대화로 고정 인건비를 매월 크게 줄이고, 수급자 정원을 최적 밀도로 구성하여 <Highlight>매달 300만~400만 원의 지출을 기적으로 아끼는 효과</Highlight>를 즉시 가져올 수 있습니다.</p>
-      <p className="mb-6 font-medium">벌써 섣불리 완공하여 창업하신 선배 대표님들은 어르신들이 이미 입소해 계시다보니, 시설을 부수고 다시 지을 수도 없어 매일 땅을 치며 후회하는 경우가 상당히 많습니다.</p>
-      <p className="mb-6">꼭 저희 굿케어가 아니더라도 좋습니다. 단순 건너서 아는 지인이나 인터넷상 가짜 지식인 글이 아닌, 진짜 주간보호 설립 전문가들의 고밀도 조언을 받아 구획과 소방 설계를 하시기 바랍니다.</p>
+      <p className="mb-6">
+        공간의 바른 설계만으로도 효율의 극대화로 인력을 줄이고 수급자 정원을 최적으로 구성하여 <Highlight>매달 300~400만 원을 절약하는 효과</Highlight>를 가져올 수 있습니다.
+      </p>
+      
+      <p className="mb-6 font-medium">
+        벌써 창업하신 대표님들은 오픈하고 어르신들도 계시니 부수고 다시 지을 수도 없으니 아쉬워하는 경우가 많습니다.
+      </p>
+      
+      <p className="mb-6">
+        꼭 저희 굿케어가 아니더라도 좋습니다. 지인 또는 건너 아는 사람, 인터넷상에 고수로 느껴지는 사람이 아닌 <span className="font-semibold text-indigo-900">진짜 주간보호 설립 전문가의 조언</span>을 받아서 설계하시기 바랍니다.
+      </p>
 
-      <ColumnImage src="/images/8-5.jpg" alt="보호자 실제 작성 감사 후기" caption="굿케어 주간보호센터 본점 어르신 보호자님들의 실제 손편지 후기" />
+      <ColumnImage src="/images/8-5.jpg" alt="보호자 실제 작성 감사 후기" caption="굿케어 주간보호센터 본점 어르신 보호자님들의 후기" />
 
       <h3 className="font-sans font-bold text-xl text-[#2b6cb0] mt-10 mb-4 border-b-2 border-gray-150 pb-2">
-        두 번째, 당신의 미래 고객이 원하는 곳에 투자하세요
+        두 번째, 고객이 원하는 곳에 투자하세요.
       </h3>
-      <p className="mb-6">위에 감사 후기에서 뚜렷하게 관찰할 수 있듯이, 결국 당신의 미래 소중한 고객들이 진정으로 원하는 것은 <span className="font-bold border-b border-indigo-400">"어르신들의 실질적인 신체 및 인지 건강 증진 활동"</span>과 <span className="font-bold border-b border-indigo-400">"사랑이 넘치는 좋은 전문 선생님들로부터 우수한 케어 돌봄 서비스를 받는 것"</span>뿐입니다.</p>
-      <p className="mb-6 text-[#e53e3e] font-semibold">제가 현업에서 가장 안타까운 낭비 경우를 말씀드리겠습니다.</p>
-      <p className="mb-6">주간보호 센터 임차에 도장을 찍은 후, 여기저기 열심히 인터넷도 찾아보시고 주위 비전문 지인들에게 조언을 구한 후, "이왕 차리는 거 번쩍이게 지어야지! 이것도 대형 투자다"라며 평당 엄청난 비용을 들여 화려한 인테리어에 전액을 쏟아붓는 경우입니다.</p>
-      <p className="mb-6">최근 원자재값 폭등과 노동 일당의 급상승으로 인테리어 시공은 대략 평당 150만 원부터 200만 원까지 치솟아 견적이 들어옵니다. 하지만,</p>
+      
+      <p className="mb-6">
+        위에 감사 후기에서 파악할 수 있듯이 결론부터 말씀드리면 당신의 미래 고객이 원하는 것은 <span className="font-bold border-b border-indigo-400">'건강 증진을 위한 신체/인지활동'</span>과 <span className="font-bold border-b border-indigo-400">'좋은 선생님으로부터 케어서비스를 받는 것'</span>입니다.
+      </p>
+      
+      <p className="mb-6 font-semibold text-amber-800">
+        제가 가장 안타까운 경우를 말씀드리겠습니다.
+      </p>
+      
+      <p className="mb-6">
+        주간보호 설립 시 임대를 하시는 경우가 대부분인데, 여기저기 열심히 인터넷도 찾아보시고 지인들에게 물어보신 후 '이것도 투자야!'라며 과도한 인테리어를 진행하는 경우입니다.
+      </p>
+      
+      <p className="mb-6">
+        창업을 준비하시며 알아보시면 최근 자재비와 인건비가 많이 올라서 인테리어 전문 업체는 대략 평당 100만 원부터 200만 원까지 다양한 견적을 받으실 수 있을 겁니다. 그런데,
+      </p>
 
       <Quote className="bg-red-50 border-rose-600 text-rose-800">
-        두 배 더 값비싼 200만 원짜리 화려한 호텔식 인테리어를 한다고 해서, 어르신이 자동으로 두 배 더 많이 모이지는 절대 않습니다.
+        두 배 비싼 200만 원짜리 인테리어를 한다고 어르신이 두 배 더 오시진 않습니다.
       </Quote>
 
-      <p className="mb-6 font-bold text-indigo-900 leading-relaxed text-xl">주간보호센터는 결코 젊은이들이 이쁜 사진 남기러 놀러 오는 스타벅스나 분위기 카페가 아닙니다.</p>
-      <p className="mb-6">이곳은 사지가 아프고 치매를 부축받으시는 노인분들이 아침 일찍 오셔서 기쁨과 온기를 나누며 하루 종일 치료와 식사를 하시다 가는 건강 거점 공간입니다.</p>
-      <p className="mb-6 font-bold">오직 '실속 있는 공간의 안전 구성'과 '실제 재활 가동'이 가장 중요합니다.</p>
+      <p className="mb-6 font-bold text-slate-900 leading-relaxed text-xl mt-4">
+        주간보호센터는 이쁜 카페를 차리는 것이 아닙니다.
+      </p>
+      
+      <p className="mb-6">
+        주간보호센터는 어르신들이 아침에 오셔서 하루 종일 머물다 가는 공간입니다. 오직 공간의 구성이 가장 중요합니다.
+      </p>
 
       <div className="grid grid-cols-2 gap-4 my-6">
         <img src="/images/8-6.jpg" alt="물리치료 운동" className="rounded-lg shadow-sm border border-gray-100 object-cover w-full h-[160px]" />
         <img src="/images/8-7.jpg" alt="슬링 재활 장비" className="rounded-lg shadow-sm border border-gray-100 object-cover w-full h-[160px]" />
       </div>
 
-      <p className="mb-6">인테리어 표면 겉장식의 과도한 거품 투자보단, 어르신들께 실 건강을 기분 좋게 회복하게 해드릴 수 있는 우수한 의료 운동 프로그램과 힐링 장비에 과감히 투자하십시오.</p>
-      <p className="mb-6"><strong>워킹 재활 운동 장비, 통증 물리치료 기기, 치매 예방 인지기억 기구, 건식 족욕기, 좌훈 힐링 시스템</strong>을 다채롭게 채우는 것이 입소자 만족도를 올려 정원을 가득 마감시키는 압도적 지름길입니다.</p>
+      <p className="mb-6 font-medium">
+        인테리어에 과도한 투자보단 건강을 지켜드릴 수 있는 좋은 프로그램과 서비스에 투자하세요.
+      </p>
       
-      <p className="mb-6">유의하셔야 할 사항으로, 인테리어 사장은 어떻게든 공사를 크게 연장시켜 마진을 증액하려 할 것이고, 개별 장비 판매원은 무작정 본인 제품의 일방적 장점만을 내세워 과잉 판매를 유인할 것입니다.</p>
+      <p className="mb-6">
+        <Highlight>운동재활 장비, 물리치료 장비, 인지재활 장비, 족욕, 힐링 시스템</Highlight> 등을 다양하게 구성하는 것이 훨씬 더 효과적입니다. 다른 수많은 주간보호 센터와 차별화될 수 있는 방법과 고객이 원하는 것은 무엇인지 잘 생각하고 판단하시기 바랍니다.
+      </p>
+      
+      <p className="mb-6 text-gray-700">
+        주의사항으로 인테리어 업체는 인테리어를 더 하게 하려고 유도하고 운동 장비 업체는 운동 장비를.. 물리치료 장비회사는 물리치료 기기의 장점을 부각시킬 겁니다.
+      </p>
 
-      <ColumnImage src="/images/8-8.jpg" alt="복합적인 힐링 설비 시스템" caption="차별화된 경쟁력 확보가 최우선 목표가 되어야 합니다." />
+      <ColumnImage src="/images/8-8.jpg" alt="복합적인 힐링 설비 시스템" caption="굿케어 주간보호센터 본점의 다양한 운동과 힐링 시스템 구성" />
 
-      <p className="mb-6 font-semibold text-[#2b6cb0]">꼭 저희 굿케어가 아니더라도 참 좋습니다. 아무런 이권 개입 없이, 오롯이 창업자 예비 원장님의 입장에서 입지 분석부터 도면 피드백, 장비 단가 조율까지 투명하게 전천후 도와줄 신뢰할 수 있는 전문 기업의 동행을 수용하시기 바랍니다.</p>
-      <p className="mb-6 text-gray-700">이 글이 현재 주간보호 설립의 어두운 터널에서 고민을 겪고 계신 예비 원장님들께, 가장 후회 없는 올바른 이정표를 세워드릴 든든한 셰르파 가이드가 되었기를 힘차게 희망합니다. 궁금하신 점은 언제든 말씀해 주세요. 읽어주셔서 대단히 감사합니다.^^</p>
+      <p className="mb-6 font-semibold text-[#2b6cb0]">
+        꼭 저희 굿케어가 아니더라도 좋습니다. 아무런 이권 없이 오롯이 예비창업자님의 입장에서 정확하게 분석하고 도와드릴 수 있는 굿케어와 같은 창업 지원 전문 기업의 지원을 받으시기 바랍니다.
+      </p>
+      
+      <p className="mb-6">
+        지금까지 주간보호 설립을 검색해 관련 정보를 찾아보고 계신 예비 창업자분들에게 올바른 선택 기준 2가지를 알려드렸습니다. 이 글이 현재 주간보호 설립을 고민하시는 분들에게 올바른 선택을 해보실 수 있는 가이드가 되었기를 바랍니다.
+      </p>
+      
+      <p className="mb-6">
+        이와 관련하여 굿케어 창업 지원 서비스에 대해 궁금하신 점이 있거나, 전문가의 조언이 필요하신 분들은 아래 포스팅에 댓글 달아주셔도 좋습니다.
+      </p>
+      
+      <p className="mb-6 font-bold text-center text-indigo-900 border-t border-gray-100 pt-6 mt-8">
+        긴 글 읽어 주셔서 감사합니다.^^
+      </p>
     </article>
   );
 }
@@ -432,84 +577,159 @@ export function Step9() {
 }
 
 // 10. 치매 어르신 구타를 바라본 굿케어
+import React from 'react';
+
 export function Step10() {
   return (
-    <article className="font-serif text-[#333] text-[19px] leading-[1.85] py-4">
-      <h2 className="font-sans font-extrabold text-2xl text-[#1a365d] mb-6 tracking-tight">
+    <article className="max-w-2xl mx-auto px-4 py-8 text-gray-850 leading-relaxed text-lg">
+      <h2 className="font-sans font-bold text-2xl text-slate-900 mt-8 mb-6">
         10. 치매 어르신 구타를 바라본 굿케어
       </h2>
-      <p className="mb-6 font-bold text-rose-600">김천에 한 주간보호센터에서 치매를 앓고 있는 42kg밖에 나가지 않는 80대 할머니를 원장과 직원들이 집단폭행 한 사건이다.</p>
-      <p className="mb-6">요즘 가장 핫한 이슈이니 장기 요양 업계 사람들과 창업을 준비하시는 분은 모두가 알 거라고 생각한다. 오늘은 위 이슈에 대하여 한번 생각해 보려 한다.</p>
+      
+      <p className="mb-6 font-bold text-rose-600 bg-rose-50 p-4 rounded-xl border border-rose-100">
+        김천의 한 주간보호센터에서 치매를 앓고 있는 42kg밖에 나가지 않는 80대 할머니를 원장과 직원들이 집단폭행 한 사건이다.
+      </p>
+      
+      <p className="mb-6">
+        요즘 가장 핫한 이슈이니 장기 요양 업계 사람들과 창업을 준비하시는 분은 모두가 알 거라고 생각한다. 오늘은 위 이슈에 대하여 한번 생각해 보려 한다.
+      </p>
 
-      <InfoBox title="🛡️ 정의로운 동행, 굿케어의 정통 공적 약력">
-        <ul className="list-none p-0 flex flex-col gap-2 font-sans font-medium text-[16px] text-[#78350f]">
-          <li>🏢 장기요양기관 창업·경영 지원 1400기관 완료</li>
-          <li>⭐ 스마트 벤처기업 · 우수기업 선정</li>
-          <li>🏆 굿케어 본사 주간보호센터 장기 요양 평가 최우수(A) 선정</li>
-          <li>🎖️ 굿케어 본사 주간보호센터 장기 요양 우수종사자 선정</li>
-          <li>🎁 굿케어 본사 주간보호센터 서비스 우수사례 우수상 배출</li>
+      <InfoBox title="🛡️ 굿케어의 정직한 성과와 발자취">
+        <ul className="list-disc pl-5 flex flex-col gap-2 font-sans font-medium text-[17px] text-[#78350f]">
+          <li>장기요양기관 창업·경영 지원 1,400기관 완료</li>
+          <li>스마트 벤처기업 · 우수기업 선정</li>
+          <li>굿케어 본사 주간보호센터 장기 요양 평가 최우수 선정</li>
+          <li>굿케어 본사 주간보호센터 장기 요양 우수종사자 선정</li>
+          <li>굿케어 본사 주간보호센터 서비스 우수사례 우수상 배출</li>
         </ul>
       </InfoBox>
 
       <ColumnImage src="/images/10-1.jpg" alt="돌봄의 중요성과 사건의 아픔" />
 
-      <p className="mb-6">모두가 위 기사를 접했을 때 화가 치밀어 올랐을 거라고 생각한다. 같은 업계에 종사하는 사람으로서 너무나 화가 났다.</p>
-      <p className="mb-6 font-semibold">오늘은 감정을 최대한 추스르고 어떤 사람들이 주간보호센터 창업을 하지 말아야 하지에 대하여 이야기해 보려 한다.</p>
+      <p className="mb-6">
+        모두가 위 기사를 접했을 때 화가 치밀어 올랐을 거라고 생각한다.<br />
+        같은 업계에 종사하는 사람으로서 너무나 화가 났다.
+      </p>
+      
+      <p className="mb-6 font-semibold text-slate-800">
+        오늘은 감정을 최대한 추스르고 어떤 사람들이 주간보호센터 창업을 하지 말아야 하지에 대하여 이야기해 보려 한다.
+      </p>
       
       <Quote>
         어르신을 오전에 모셔와서, 함께 놀고, 돌봐드리고, 식사를 대접하고 안전하게 집에 모셔다드리는 곳이 주간보호 센터이다.
       </Quote>
 
-      <p className="mb-6 font-normal">7년 동안 3,000건이 넘는 상담을 해보면 다음과 같은 이야기를 자주 듣는다.</p>
+      <p className="mb-6">
+        7년 동안 3,000건이 넘는 상담을 해보면 다음과 같은 이야기를 자주 듣는다.
+      </p>
       
       <div className="bg-slate-50 border border-slate-100 p-5 rounded-xl my-6 font-sans">
-        <p className="font-bold text-indigo-900 mb-2">💬 대표적인 상담 진술 사례</p>
-        <p className="text-gray-800 leading-relaxed font-semibold">
+        <p className="font-bold text-slate-700 mb-2">💬 대표적인 상담 사례</p>
+        <p className="text-gray-800 leading-relaxed font-semibold text-base pl-2 border-l-4 border-indigo-400">
           "주간보호센터 하면 수익 구조는 괜찮은 가요?"<br />
           "제가 봉사를 열심히 해왔는데 주간보호센터 해서 좋은 일 하려고요."
         </p>
       </div>
 
-      <p className="mb-6">노인복지사업 창업가로서 솔직하게 말하겠다. 아래 두 부류는 한 번 더 노인복지사업에 대해 신중하게 고민하였으면 한다.</p>
+      <p className="mb-6 font-medium">
+        노인복지사업 창업가로서 솔직하게 말하겠다. 아래 두 부류는 한 번 더 노인복지사업에 대해 신중하게 고민하였으면 한다.
+      </p>
 
       <h3 className="font-sans font-bold text-xl text-[#e53e3e] mt-10 mb-4 border-b-2 border-gray-150 pb-2">
-        첫 번째, 머리만 있는 사람 (가슴이 결여된 냉혹한 비즈니스 계산)
+        첫 번째, 머리만 있는 사람
       </h3>
-      <p className="mb-6">이런 상담 예는 수익에서 시작에서 수익으로 끝난다. 머릿속에 어르신이라는 단어는 존재하지 않는 거 같다. 모든 것이 돈으로 카운팅 된다.</p>
       
+      <p className="mb-6">
+        이런 상담 예는 수익에서 시작해서 수익으로 끝난다. 머릿속에 어르신이라는 단어는 존재하지 않는 거 같다. 모든 것이 돈으로 카운팅 된다.
+      </p>
+      
+      <p className="mb-6">
+        주간보호센터를 창업하려면 임대보증금, 인테리어 비용, 인건비 등등.. 몇억 단위의 돈이 들어간다. 주간보호 센터는 규모 대비 투자금도 수익도 달라진다.
+      </p>
+      
+      <p className="mb-6 font-bold text-rose-600">
+        수익률만 바라보고 사업을 하고 싶다면, 제발 돈 더 되는 다른 사업을 찾아가시는 게 맞다.
+      </p>
+      
+      <p className="mb-6">
+        주간보호 특성상 규모에 대비하여 정해진 수익이 나는데도 불구하고 수익만 쫓는 사람들은 자신의 몫이 아닌 직원들 급여, 어르신들 식대로 장난을 치려고 한다. 모든 어르신이 단순히 돈으로 보인다.
+      </p>
+      
+      <p className="mb-6 font-semibold">
+        그렇게 운영되는 센터 중에 오랫동안 정상적으로 운영되는 센터는 없었다.
+      </p>
+
       <ColumnImage src="/images/10-2.jpg" alt="이윤 추구" />
 
-      <p className="mb-6">주간보호센터를 창업하려면 임대보증금, 인테리어 비용, 인건비 등등.. 몇억 단위에 돈이 들어간다. 주간보호 센터는 규모 대비 투자금도 수익도 달라진다.</p>
-      <p className="mb-6 font-semibold text-rose-600">수익률만 바라보고 사업을 하고 싶다면, 제발 돈 더 되는 다른 사업을 찾아가시는 게 맞다.</p>
-      <p className="mb-6">주간보호 특성상 규모에 대비하여 정해진 수익이 나는데도 불구하고 수익만 쫓는 사람들은 자신의 몫이 아닌 직원들 급여, 어르신들 식대로 장난을 치려고 한다. 모든 어르신이 단순히 한낱 머릿수 돈으로 보인다.</p>
-      <p className="mb-6">그렇게 운영되는 센터 중에 오랫동안 정상적으로 운영되는 센터는 단 한 곳도 없었다.</p>
-      <p className="mb-6"><strong>주간보호센터 운영은 정성과 어르신들을 생각하는 숭고한 마음이 없다면, 결코 운영하기 쉬운 정형적 국가 세금 돈이나 받아먹을 수 있는 단순 공짜 사업이 절대 아니다.</strong></p>
-      <p className="mb-6 font-medium">내 돈을 들여서 설립했지만 오픈과 동시에 모든 공단과 시군구의 관리를 받고 근무하시는 선생님들은 서류와의 전쟁을 치른다.</p>
-      <p className="mb-6 text-red-600 font-bold border border-red-200 bg-red-50 p-4 rounded-md">창업하시는 분 중 어르신에 대한 신체적/정서적 거부감이 있으신 분들, 돈만 벌려고 주간보호 센터 하시려는 분들은 제발.. 제발 다른 사업을 알아보시길 간곡히 부탁드린다.</p>
+      <p className="mb-6">
+        주간보호센터 운영은 정성과 어르신들을 생각하는 마음이 없다면 운영하기 쉬운 정부 돈 받아먹을 수 있는 사업이 절대 아니다.
+      </p>
+      
+      <p className="mb-6">
+        내 돈을 들여서 설립했지만 오픈과 동시에 모든 공단과 시군구의 관리를 받고 근무하시는 선생님들은 서류와의 전쟁을 치른다.
+      </p>
+      
+      <p className="mb-6 text-red-600 font-bold border border-red-200 bg-red-50 p-4 rounded-xl">
+        창업하시는 분 중 어르신에 대한 거부감이 있으신 분들, 돈만 벌려고 주간보호 센터 하시려는 분들은 제발.. 제발 다른 사업을 알아보시길 간곡히 부탁드린다.
+      </p>
 
       <h3 className="font-sans font-bold text-xl text-[#2b6cb0] mt-10 mb-4 border-b-2 border-gray-150 pb-2">
-        두 번째, 마음만 있는 사람 (현장 경영 감각이 제로인 감상적 자선가)
+        두 번째, 마음만 있는 사람
       </h3>
-      <p className="mb-6">어르신을 모시는 정서력에는 대단히 탁월한 사람일 수도 있다. 가슴이 따뜻하다 못해 뜨겁다.</p>
       
-      <ColumnImage src="/images/10-3.jpg" alt="자원 봉사" />
+      <p className="mb-6">
+        어르신을 모시는 데 탁월한 사람일 수도 있다. 가슴이 따뜻하다 못해 뜨겁다. 그러나 사업을 직접 해본 경험은 없다. 복지관이나 주간보호 센터에서 봉사를 해봐서 어떻게 돌아가는지는 대충 살펴봤다.
+      </p>
+      
+      <p className="mb-6 font-bold text-rose-600">
+        수익구조가 어떻게 되는지, 인력 관리는 어떻게 하는지, 청구는 어떻게 하는지, 회계나 행정서류는 아무것도 모르고 관심조차도 없다.
+      </p>
+      
+      <p className="mb-6">
+        그리고 그 피해는 어르신과 직원 선생님들에게 돌아간다. 희생과 봉사를 강요하기도 한다.
+      </p>
+      
+      <p className="mb-6 font-medium">
+        봉사에 너무나 탁월하나 행정이나 사업에는 관심조차 없으신 분들은.. 앞으로도 관심 가질 생각 없으신 분들은 봉사를 계속하시는 걸 추천해 드린다.
+      </p>
 
-      <p className="mb-6">그러나 사업이나 시설 조율을 단 한 번이라도 직접 해본 경험은 일절 없다. 복지관이나 주간보호 센터에서 단순 자원봉사만 몇 번 해봐서 시스템이 어떻게 굴러가는지는 대충 눈으로만 겨우 살펴봤다.</p>
-      <p className="mb-6 font-bold text-rose-600">수익구조가 어떻게 되는지, 인력 관리는 어떻게 하는지, 부정 청구 방지법은 뭔지, 회계나 감사 행정서류 처리는 아무것도 관심조차도 없고 전혀 공부할 마음도 없다.</p>
-      <p className="mb-6">그리고 그 지식 누락으로 인한 처참한 영업 피해는, 결국 수개월 내 고스란히 어르신들과 고용된 사랑하는 요양 직원 선생님들께 고통으로 고스란히 되돌아간다. 심지어 경영 미숙으로 인한 직원들의 희생과 무임금 봉사를 어리석게 독촉 하기도 한다.</p>
-      <p className="mb-6 font-semibold">봉사에 너무나 탁월하나 행정이나 사업 연립에는 관심조차 없으신 분들은.. 앞으로도 복잡한 소방법과 행정고시를 공부할 관심이 일절 없으신 분들이라면 그냥 봉사활동을 평생 계속하시는 걸 적극 추천해 드린다.</p>
-      <p className="mb-6">혼자 봉사를 할 때는 나만의 희생이지만 주간보호 센터를 창업하고 운영하면서 모든 직원들에게만 일방적 희생을 강요하거나 바랄 수는 없다. 복지사업은 단순 취미 봉사활동과 달리 나의 어설픈 자선 착각으로 인하여 누군가의 소중한 가정 생계가 무너지는 힘든 상황을 초래할 수 있다는 것이다.</p>
+      <ColumnImage src="/images/10-3.jpg" alt="자원 봉사" caption="굿케어 직원들의 봉사활동 모습" />
 
+      <p className="mb-6">
+        혼자 봉사를 할 때는 나만의 희생이지만 주간보호 센터를 창업하고 운영하면서 모든 직원들에게 희생만을 요구하거나 바랄 수는 없다.<br />
+        복지사업은 봉사활동과 달리 나의 봉사로 인하여 누군가가 힘들어질 수도 있다는 것이다.
+      </p>
+      
       <WarningQuote>
         취미가 업이 되어 더 이상 즐겁지 않기를 바라지 않는다.
       </WarningQuote>
 
-      <p className="mb-6">그러하기에 이번 42kg 김천 할머니 구타 폭행 사건 또한, 단순히 '머리만 차가운 투기꾼이 주도한 단독 폭행 행동이다' 라고 가볍게 단정 지을 수 없다. 제대로 된 인력 관리 및 시스템 통제, 그리고 바른 도덕성이 결여되었을 때 나오는 복합적 실패 결과이다.</p>
-      <p className="mb-6 font-bold text-teal-800 text-xl border-t border-gray-100 pt-6">결국, 복지 사업은 마음과 머리가 완벽히 양 팔을 잡고 함께 조율하며 걷는 밸런스 사업입니다.</p>
-      <p className="mb-6">머리만 있는 사람은 제발 다른 투기 사업을 하시고, 마음만 동요하시는 순수한 분들은 봉사를 유익하게 지속하시길 권장한다. 하지만, <Highlight>머리와 함께 갖출 따뜻한 보호의 마음.. 또 그 마음을 든든하게 수호할 차가운 비즈니스 전술 머리가 함께 준비되어 있다면 그것으로 완벽히 충분합니다.</Highlight></p>
-      <p className="mb-6 text-gray-700">복지 사업은 사업을 잘 아시는 뛰어난 대표자가 복지다운 숭고함을 배우고, 복지를 평생 돌보던 영혼이 비즈니스 수익 관리를 철저히 수반하며 배워나갈 때 비로소 완성도 높게 유지됩니다. 감사합니다.</p>
+      <p className="mb-6 mt-6">
+        그러하기에 이번 42kg 할머니 폭행 사건이 당연히 '머리만 있는 사람이 한 행동이다!'라고 단정 지을 수도 없다.<br />
+        제대로 된 인력 관리 및 시스템 통제, 그리고 바른 도덕성이 결여되었을 때 나오는 복합적 실패 결과이다.
+      </p>
+      
+      <p className="mb-6 font-bold text-teal-800 text-xl text-center bg-teal-50 p-4 rounded-xl border border-teal-100 my-6">
+        결국 복지사업은 마음과 머리가 같이 하는 사업이다.
+      </p>
+      
+      <p className="mb-6">
+        머리만 있는 사람은 제발 다른 사업을 하시고 마음만 있는 사람은 봉사를 하시길 바란다.
+      </p>
+      
+      <p className="mb-6 font-medium text-slate-900">
+        하지만, 머리와 함께 할 마음.. 마음과 함께 할 머리가 있으신 분은 <Highlight>그걸로 충분합니다.</Highlight>
+      </p>
+      
+      <p className="mb-6">
+        결국 복지사업은 사업을 잘 아는 사람은 복지를 배우고, 복지를 잘 아는 사람은 사업을 배워나가며 운영해 나갈 수밖에 없다.
+      </p>
 
       <ColumnImage src="/images/10-4.jpg" alt="감동적인 요양 현장의 따뜻한 손길" />
+      
+      <p className="mb-6 font-bold text-center text-indigo-900 border-t border-gray-100 pt-6 mt-8">
+        감사합니다.
+      </p>
     </article>
   );
 }

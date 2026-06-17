@@ -3,6 +3,7 @@ import { HeartHandshake, Phone, List, X, BookOpen, ChevronRight } from "lucide-r
 import { AnimatePresence, motion } from "motion/react";
 
 import Intro from "./components/Intro";
+import { Logo } from "./components/Common";
 import { Step1, Step2, Step3, Step4, Step5 } from "./components/ColumnsPart1";
 import { Step6, Step7, Step8, Step9, Step10 } from "./components/ColumnsPart2";
 
@@ -41,6 +42,32 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<ArticleId>("step-intro");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [scrollPercent, setScrollPercent] = useState(0);
+
+  // 스크롤 위치를 감지하여 진행률(Progress) 바 퍼센트를 계산합니다.
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const handleScroll = () => {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      const totalScroll = scrollHeight - clientHeight;
+      if (totalScroll <= 0) {
+        setScrollPercent(0);
+      } else {
+        const percentage = (scrollTop / totalScroll) * 100;
+        setScrollPercent(percentage);
+      }
+    };
+
+    container.addEventListener("scroll", handleScroll);
+    // 초기 설정
+    handleScroll();
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, [activeTab]);
 
   // 글 전환 시 폰 내부 스크롤을 맨 위로 원위치 시킵니다.
   const handleSelectArticle = (id: ArticleId) => {
@@ -63,9 +90,7 @@ export default function App() {
         
         {/* 로고 영역 */}
         <div className="flex items-center gap-2.5 mb-8">
-          <div className="bg-rose-500 p-2.5 rounded-full text-white shadow-md">
-            <HeartHandshake className="w-6 h-6" />
-          </div>
+          <Logo className="w-6 h-6" containerClassName="bg-rose-500 p-2.5 rounded-full text-white shadow-md flex items-center justify-center shrink-0" />
           <span className="font-extrabold text-xl tracking-tight text-slate-900">굿케어</span>
         </div>
 
@@ -155,10 +180,10 @@ export default function App() {
           {/* 모바일 최적화 상단 헤더 (모바일 화면 한정 노출) */}
           <header className="lg:hidden w-full bg-white border-b border-slate-100 px-6 py-4 flex items-center justify-between select-none shrink-0 sticky top-0 z-15">
             <button
-              onClick={() => handleSelectArticle("step-intro")}
-              className="flex items-center gap-1 text-slate-800"
+               onClick={() => handleSelectArticle("step-intro")}
+               className="flex items-center gap-1.5 text-slate-800"
             >
-              <HeartHandshake className="w-6 h-6 text-rose-500" />
+              <Logo className="w-6 h-6" containerClassName="text-rose-500 flex items-center justify-center shrink-0" />
               <span className="font-extrabold text-base tracking-tight select-none">굿케어</span>
             </button>
             
@@ -175,11 +200,21 @@ export default function App() {
           <div 
             ref={scrollContainerRef}
             id="scrollArea"
-            className="flex-1 overflow-y-auto bg-white"
+            className="flex-1 overflow-y-auto bg-white relative"
             style={{
               scrollBehavior: "smooth"
             }}
           >
+            {/* 칼럼 읽기 진행률 진행바 (가느다란 Progress Bar) */}
+            {activeTab !== "step-intro" && (
+              <div className="sticky top-0 left-0 w-full h-1 bg-slate-100 z-30 pointer-events-none">
+                <div 
+                  className="h-full bg-rose-500 rounded-r-full transition-all duration-75" 
+                  style={{ width: `${scrollPercent}%` }} 
+                />
+              </div>
+            )}
+
             {/* 탭 렌더 제어 */}
             <AnimatePresence mode="wait">
               <motion.div
