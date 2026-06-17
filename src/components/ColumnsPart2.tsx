@@ -156,7 +156,7 @@ export function Step7() {
         입지가 괜찮으면서도, 노유자시설에 가까운, 내가 원하는 평수를 찾는 것에 많은 시간을 할애하시는데요.
       </p>
       
-      <ColumnImage src="/images/7-1.jpg" alt="노유자시설 현황" />
+      <ColumnImage src="/images/7-14.jpg" alt="노유자시설 현황" />
 
       <p className="mb-6 font-medium text-slate-800">
         왜 그럴까 곰곰이 생각해보면, 노유자시설 용도변경 투자금액이 만만치 않기 때문입니다.
@@ -203,7 +203,7 @@ export function Step7() {
         매출은 한정되어있는데, 지출만 늘어나게 되는 구조는 물론, 소규모 센터는 공단의 정책 변경에 갈대와 같이 흔들릴 수밖에 없습니다.
       </p>
 
-      <ColumnImage src="/images/7-4.jpg" alt="규모의 경제성 확보" caption="굿케어 직영. 90인 정원 스마트재활 8년차 센터" />
+      <ColumnImage src="/images/7-3.jpg" alt="규모의 경제성 확보" caption="굿케어 직영. 90인 정원 스마트재활 8년차 센터" />
 
       <p className="mb-6 font-bold text-indigo-900">
         22년, 지금으로부터 약 4년 전에는 무조건 80평 이상은 하셔야 한다고 말씀드렸는데, 현재 기준으로는 최소 120평 이상은 해주셔야 안전합니다.
@@ -233,7 +233,7 @@ export function Step7() {
           <p className="text-gray-700 leading-relaxed mb-3">
             또한 그 외에 장애인 주차장 또한 갖추어져있다면, 그럴 가능성은 더욱 커지는데요. 만약 장애인 주차장이 없다면, 필수적으로 만드셔야 합니다. 있는 경우에도 규정변경도 많이 바뀌고 있어서 보완 해야 할 가능성이 큽니다.
           </p>
-          <div className="max-w-md"><img src="/images/7-9.jpg" alt="장애인 주차장 유무" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-6.jpg" alt="장애인 주차장 유무" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 3 */}
@@ -251,7 +251,7 @@ export function Step7() {
           <p className="text-gray-700 leading-relaxed mb-3">
             소방시설이 되어있어도, 스프링클러 증이설은 추가로 들어가야 하는 경우가 많습니다. 노유자 시설 용도변경에 있어, 가장 많은 비용이 들어가다보니, 내부까지 들어가셨다면 필수적으로 잘 확인하셔야겠습니다.
           </p>
-          <div className="max-w-md"><img src="/images/7-11.jpg" alt="소화전 스프링쿨러 유무 확인" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-1.jpg" alt="소화전 스프링쿨러 유무 확인" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 5 */}
@@ -260,7 +260,7 @@ export function Step7() {
           <p className="text-gray-700 leading-relaxed mb-3">
             배연창은 화재시, 자동으로 열리는 창문을 말합니다. 많이 헷갈려 하시는데 2층이상은 배연창이 필수입니다.
           </p>
-          <div className="max-w-md"><img src="/images/7-12.jpg" alt="배연창 확인" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-9.jpg" alt="배연창 확인" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 6 */}
@@ -269,7 +269,7 @@ export function Step7() {
           <p className="text-gray-700 leading-relaxed mb-3">
             정부 24에 들어가시면 건축물대장을 발급받을 수 있습니다. 내진설계가 되어있는지도 확인하셔야겠습니다.
           </p>
-          <div className="max-w-md"><img src="/images/7-13.jpg" alt="건축물대장, 내진설계" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-11.jpg" alt="건축물대장, 내진설계" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
 
         {/* 7 */}
@@ -278,7 +278,7 @@ export function Step7() {
           <p className="text-gray-700 leading-relaxed mb-3">
             마지막은 장애인 화장실입니다. 꼭 센터 내부에 있어야하는건 아닙니다. 임대층에 있다면 사용이 가능하지만, 대부분 만드시긴 하지요.
           </p>
-          <div className="max-w-md"><img src="/images/7-14.jpg" alt="장애인 화장실" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
+          <div className="max-w-md"><img src="/images/7-4.jpg" alt="장애인 화장실" className="rounded-md w-full h-auto object-cover max-h-[220px]" /></div>
         </div>
       </div>
 
@@ -295,7 +295,7 @@ export function Step7() {
         그러기 위해선 진짜 전문가를 만나시기 위해, 전문가를 찾아 나서는 시간을 할애 하셔야 할 것 같습니다.
       </p>
       
-      <ColumnImage src="/images/7-6.jpg" alt="인테리어 현장 실무 배제" />
+      <ColumnImage src="/images/7-5.jpg" alt="인테리어 현장 실무 배제" />
 
       <p className="mb-6 font-medium text-slate-800">
         왜 공사현장에 나오지말라하냐면, 대표님이 하셔야 하는 것은 딱 2가지 입니다.
@@ -324,7 +324,7 @@ export function Step7() {
         그러니 대표님이 하셔야 할 건, 진짜 전문가를 찾는 보는 일, 괜찮은 노유자시설을 찾아보는 일, 이 2가지입니다.
       </p>
 
-      <ColumnImage src="/images/7-7.jpg" alt="전문 파트너십 구축" />
+      <ColumnImage src="/images/7-13.jpg" alt="전문 파트너십 구축" />
 
       <p className="mb-6">
         굿케어는 예비 대표님들을 위해 유튜브 공헌사업과 네이버카페 공헌사업, 블로그 운영 공헌사업, 무료상담 30분 제공 사업을 진행하고 있습니다.
