@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { HeartHandshake, Phone, List, X, BookOpen, ChevronRight } from "lucide-react";
+import { HeartHandshake, Phone, List, X, BookOpen, ChevronRight, Youtube, ExternalLink } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
 import Intro from "./components/Intro";
@@ -242,6 +242,44 @@ export default function App() {
           </a>
         </div>
 
+        {/* 📢 굿케어 공식 SNS & 정보 공유 채널 바로가기 */}
+        <div className="mb-6 flex flex-col gap-2">
+          <p className="text-xs font-black text-slate-400 uppercase tracking-wider mb-1">
+            📢 굿케어 공식 채널 바로가기
+          </p>
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-2">
+            <a
+              href="https://blog.naver.com/goodcarecom"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 p-2.5 bg-emerald-50 hover:bg-emerald-100 border border-emerald-100/50 text-emerald-800 rounded-xl transition-all text-xs font-black shadow-sm"
+            >
+              <div className="w-5 h-5 rounded-md bg-emerald-500 font-black text-[11px] text-white flex items-center justify-center shrink-0">N</div>
+              <span className="truncate">공식 블로그</span>
+            </a>
+            
+            <a
+              href="https://cafe.naver.com/goodcarepartners"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 p-2.5 bg-green-50 hover:bg-green-100 border border-green-100/50 text-green-800 rounded-xl transition-all text-xs font-black shadow-sm"
+            >
+              <div className="w-5 h-5 rounded-md bg-green-600 font-black text-[11px] text-white flex items-center justify-center shrink-0">C</div>
+              <span className="truncate">공식 카페</span>
+            </a>
+
+            <a
+              href="https://www.youtube.com/@goodcare1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 p-2.5 bg-red-50 hover:bg-red-100 border border-red-100/50 text-red-800 rounded-xl transition-all text-xs font-black shadow-sm"
+            >
+              <Youtube className="w-4 h-4 text-red-600 shrink-0" />
+              <span className="truncate">공식 유튜브</span>
+            </a>
+          </div>
+        </div>
+
         <p className="text-slate-400 font-medium text-sm mb-4 border-t border-slate-100 pt-6">
           읽고 싶은 주제를 클릭하세요.
         </p>
@@ -404,7 +442,7 @@ export default function App() {
                     initial={{ opacity: 0, scale: 0.9, y: 10 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9, y: 10 }}
-                    className="relative z-20 mb-3.5 w-64 bg-white/90 backdrop-blur-md rounded-2xl shadow-[0_12px_36px_rgba(30,27,75,0.22)] border border-white/45 p-4 flex flex-col gap-2.5"
+                    className="relative z-20 mb-3.5 w-72 bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_12px_36px_rgba(30,27,75,0.22)] border border-white/50 p-4 flex flex-col gap-2.5"
                   >
                     <div className="text-[11px] font-black tracking-wide text-blue-600 uppercase px-1">
                       ⚡ 굿케어 전문가 빠른 상담
@@ -416,9 +454,9 @@ export default function App() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setIsInquiryOpen(false)}
-                      className="flex items-center gap-3.5 p-3.5 bg-indigo-50/70 hover:bg-indigo-100/90 text-indigo-950 rounded-xl transition-all border border-indigo-100/40 group backdrop-blur-xs"
+                      className="flex items-center gap-3 p-3 bg-indigo-50/85 hover:bg-indigo-100/95 text-indigo-950 rounded-xl transition-all border border-indigo-100/40 group backdrop-blur-xs"
                     >
-                      <div className="p-2.5 bg-indigo-600/90 text-white rounded-lg shadow-sm">
+                      <div className="p-2.5 bg-indigo-600 text-white rounded-lg shadow-sm shrink-0">
                         <BookOpen className="w-4 h-4" />
                       </div>
                       <div className="flex flex-col text-left">
@@ -431,9 +469,9 @@ export default function App() {
                     <a
                       href="tel:1522-3133"
                       onClick={() => setIsInquiryOpen(false)}
-                      className="flex items-center gap-3.5 p-3.5 bg-blue-50/70 hover:bg-blue-100/90 text-blue-950 rounded-xl transition-all border border-blue-100/40 group backdrop-blur-xs"
+                      className="flex items-center gap-3 p-3 bg-blue-50/85 hover:bg-blue-100/90 text-blue-950 rounded-xl transition-all border border-blue-100/40 group backdrop-blur-xs"
                     >
-                      <div className="p-2.5 bg-blue-600/90 text-white rounded-lg shadow-sm">
+                      <div className="p-2.5 bg-blue-600 text-white rounded-lg shadow-sm shrink-0">
                         <Phone className="w-4 h-4 fill-white/10" />
                       </div>
                       <div className="flex flex-col text-left">
@@ -441,6 +479,52 @@ export default function App() {
                         <span className="text-[11px] text-slate-500 font-bold mt-0.5">굿케어 가맹 문의 (내선 1번)</span>
                       </div>
                     </a>
+
+                    <div className="border-t border-slate-100/80 my-0.5" />
+
+                    <div className="text-[11px] font-black tracking-wide text-slate-400 uppercase px-1">
+                      📢 굿케어 공식 채널 바로가기
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-2">
+                      {/* 블로그 */}
+                      <a
+                        href="https://blog.naver.com/goodcarecom"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsInquiryOpen(false)}
+                        className="flex flex-col items-center justify-center p-2.5 bg-emerald-50 hover:bg-emerald-100 border border-emerald-100/20 rounded-xl transition-all text-center group"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-emerald-500 font-black text-xs text-white flex items-center justify-center mb-1 shadow-sm shrink-0">N</div>
+                        <span className="text-[10px] font-black text-emerald-900 group-hover:text-emerald-700">블로그</span>
+                      </a>
+                      
+                      {/* 카페 */}
+                      <a
+                        href="https://cafe.naver.com/goodcarepartners"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsInquiryOpen(false)}
+                        className="flex flex-col items-center justify-center p-2.5 bg-green-50 hover:bg-green-100 border border-green-100/20 rounded-xl transition-all text-center group"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-green-600 font-black text-xs text-white flex items-center justify-center mb-1 shadow-sm shrink-0">카페</div>
+                        <span className="text-[10px] font-black text-green-900 group-hover:text-green-700">공식카페</span>
+                      </a>
+
+                      {/* 유튜브 */}
+                      <a
+                        href="https://www.youtube.com/@goodcare1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsInquiryOpen(false)}
+                        className="flex flex-col items-center justify-center p-2.5 bg-red-50 hover:bg-red-100 border border-red-100/20 rounded-xl transition-all text-center group"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-red-600 text-white flex items-center justify-center mb-1 shadow-sm shrink-0">
+                          <Youtube className="w-4 h-4 text-red-100" />
+                        </div>
+                        <span className="text-[10px] font-black text-red-900 group-hover:text-red-700">유튜브</span>
+                      </a>
+                    </div>
                   </motion.div>
                 </>
               )}
