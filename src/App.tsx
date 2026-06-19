@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { HeartHandshake, Phone, List, X, BookOpen, ChevronRight, Youtube, ExternalLink } from "lucide-react";
+import { HeartHandshake, Phone, List, X, BookOpen, ChevronRight, Youtube, ExternalLink, Calendar } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
 import Intro from "./components/Intro";
@@ -463,6 +463,23 @@ export default function App() {
                     <div className="text-[11px] font-black tracking-wide text-blue-600 uppercase px-1">
                       ⚡ 굿케어 전문가 빠른 상담
                     </div>
+                    
+                    {/* 0. 7월 창업포럼 신청 (한시적 노출) */}
+                    <a
+                      href="https://cafe.naver.com/goodcarepartners/13162"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsInquiryOpen(false)}
+                      className="flex items-center gap-3 p-3 bg-amber-50/90 hover:bg-amber-100/95 text-amber-950 rounded-xl transition-all border border-amber-200/50 group backdrop-blur-xs shadow-xs animate-pulse hover:animate-none"
+                    >
+                      <div className="p-2.5 bg-amber-500 text-white rounded-lg shadow-sm shrink-0">
+                        <Calendar className="w-4 h-4" />
+                      </div>
+                      <div className="flex flex-col text-left">
+                        <span className="text-sm font-black text-amber-900 group-hover:text-amber-700 transition-colors">🔥 7월 창업포럼 신청</span>
+                        <span className="text-[10px] text-amber-600 font-bold mt-0.5">선착순 조기 마감 예정!</span>
+                      </div>
+                    </a>
                     
                     {/* 1. 무료상담 설문지 신청 */}
                     <a
