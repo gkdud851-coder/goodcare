@@ -509,7 +509,7 @@ export default function App() {
                       </div>
                       <div className="flex flex-col text-left">
                         <span className="text-sm font-black group-hover:text-blue-600 transition-colors">1522-3133 전화연결</span>
-                        <span className="text-[11px] text-slate-500 font-bold mt-0.5">굿케어 가맹 문의 (내선 1번)</span>
+                        <span className="text-[11px] text-slate-500 font-bold mt-0.5">굿케어 문의 (내선 1번)</span>
                       </div>
                     </a>
 
