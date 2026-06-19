@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 메인 홈 (소개 페이지) -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- 1. 무경력자도 주간보호센터 창업할 수 있을까? -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step1</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 2. 자격증 없어도 주간보호센터 창업할 수 있다고? -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step2</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 3. 주간보호센터 가족사업으로 해도 될까? -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step3</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 4. 주간보호센터 양도양수 vs 신규창업 -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step4</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 5. 주간보호센터 창업하면 얼마나 걸릴까? -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step5</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 6. 주간보호센터 창업지원금 정부지원금 있나요? -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step6</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 7. 노유자시설 해결하여 주간보호센터 창업비용 아끼기 -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step7</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 8. 주간보호센터 구조설계 및 인테리어 주의점 -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step8</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 9. 주간보호센터 창업절차 실전 16단계 -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step9</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 10. 치매 어르신 돌봄철학과 주간보호센터 창업 가치 -->
+  <url>
+    <loc>https://goodcare-startup.co.kr/?step=step10</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

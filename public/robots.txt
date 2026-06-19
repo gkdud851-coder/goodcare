@@ -1,0 +1,6 @@
+# 굿케어 주간보호센터 요양원 창업 가이드 로봇 규칙 설저
+User-agent: *
+Allow: /
+
+# 사이트맵 경로 안내 (검색 엔진이 탐색할 수 있도록 지정)
+Sitemap: https://goodcare-startup.co.kr/sitemap.xml

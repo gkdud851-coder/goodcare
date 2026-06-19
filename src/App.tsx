@@ -77,8 +77,8 @@ export default function App() {
   // 2. 검색엔진 최적화 (SEO)를 위해 활성화된 아티클(칼럼)의 특성에 맞춰 메타데이터를 실시간으로 주입합니다.
   // 네이버 검색 로봇(Yeti)이 자바스크립트를 해석하여 각 개별 칼럼의 타이틀과 설명문을 완벽히 인지 및 색인(Index)하도록 설계했습니다.
   useEffect(() => {
-    let pageTitle = "굿케어 주간보호센터 창업 가이드 | 어르신유치원 노인복지센터";
-    let pageDesc = "주간보호센터창업, 어르신유치원창업, 노인복지센터창업에 대한 최고의 실전 심층 안내서. 무경력자 자격, 비용, 정부지원금, 노유자 인허가 등을 투명하게 공개합니다.";
+    let pageTitle = "굿케어 주간보호센터 요양원 창업 가이드 | 일생일대 30분 무료 컨설팅 및 창업칼럼";
+    let pageDesc = "\"복지도 사업이다!\" 방문요양, 주간보호, 요양원 등 장기요양기관은 정부에서 위탁받아 운영하는 복지사업입니다. 따라서, 일반적인 사업의 목표인 '수익 극대화'뿐 아니라 '수익 지키기'까지 잘! 해야 합니다. 1,400기관의 선택, 굿케어가 가장 잘하는 것! 장기요양기관 수익 극대화, 또 그걸 지키는 것입니다.";
 
     switch (activeTab) {
       case "step1":
@@ -123,8 +123,8 @@ export default function App() {
         break;
       case "step-intro":
       default:
-        pageTitle = "굿케어 주간보호센터 창업 가이드 | 대표 원장 천천박사 특강";
-        pageDesc = "주간보호센터 창업의 진실! 가맹, 도면설계, 인허가 절벽에서 헤매는 대표님들을 위해 천천박사팀이 일대일 무상 비공개 컨설팅을 진행합니다.";
+        pageTitle = "굿케어 주간보호센터 요양원 창업 가이드 | 일생일대 30분 무료 컨설팅 및 창업칼럼";
+        pageDesc = "\"복지도 사업이다!\" 방문요양, 주간보호, 요양원 등 장기요양기관은 정부에서 위탁받아 운영하는 복지사업입니다. 따라서, 일반적인 사업의 목표인 '수익 극대화'뿐 아니라 '수익 지키기'까지 잘! 해야 합니다. 1,400기관의 선택, 굿케어가 가장 잘하는 것! 장기요양기관 수익 극대화, 또 그걸 지키는 것입니다.";
         break;
     }
 
@@ -144,6 +144,22 @@ export default function App() {
     
     let ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc) ogDesc.setAttribute("content", pageDesc);
+
+    let ogImage = document.querySelector('meta[property="og:image"]');
+    if (!ogImage) {
+      ogImage = document.createElement("meta");
+      ogImage.setAttribute("property", "og:image");
+      document.head.appendChild(ogImage);
+    }
+    ogImage.setAttribute("content", "/images/로고1.png");
+
+    let ogSiteName = document.querySelector('meta[property="og:site_name"]');
+    if (!ogSiteName) {
+      ogSiteName = document.createElement("meta");
+      ogSiteName.setAttribute("property", "og:site_name");
+      document.head.appendChild(ogSiteName);
+    }
+    ogSiteName.setAttribute("content", "굿케어");
 
     let linkCanonical = document.querySelector('link[rel="canonical"]');
     if (!linkCanonical) {

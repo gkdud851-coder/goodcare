@@ -1,6 +1,6 @@
 {
-  "name": "굿케어 창업칼럼 뷰어",
-  "description": "장기요양기관 전문가 집단 굿케어의 창업칼럼을 모바일 화면으로 편리하게 읽을 수 있는 반응형 뷰어 애플리케이션입니다.",
+  "name": "굿케어 주간보호센터 요양원 창업 가이드",
+  "description": "\"복지도 사업이다!\" 방문요양, 주간보호, 요양원 등 장기요양기관은 정부에서 위탁받아 운영하는 복지사업입니다. 1,400기관의 선택 굿케어 전문가들의 일생일대 30분 무료 컨설팅과 특급 창업칼럼 모음입니다.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
