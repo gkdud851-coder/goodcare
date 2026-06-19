@@ -6,6 +6,7 @@ import Intro from "./components/Intro";
 import { Logo } from "./components/Common";
 import { Step1, Step2, Step3, Step4, Step5 } from "./components/ColumnsPart1";
 import { Step6, Step7, Step8, Step9, Step10 } from "./components/ColumnsPart2";
+import { Step11, Step12 } from "./components/ColumnsPart3";
 
 type ArticleId = 
   | "step-intro" 
@@ -18,11 +19,15 @@ type ArticleId =
   | "step7" 
   | "step8" 
   | "step9" 
-  | "step10";
+  | "step10"
+  | "step11"
+  | "step12"
+  | "step13";
 
 interface TocItem {
   id: ArticleId;
   title: string;
+  externalUrl?: string;
 }
 
 const TOC_ITEMS: TocItem[] = [
@@ -34,8 +39,11 @@ const TOC_ITEMS: TocItem[] = [
   { id: "step6", title: "6. 주간보호센터 창업지원금 정부지원금 있나요?" },
   { id: "step7", title: "7. 노유자시설 해결하여 주간보호센터 창업비용 아끼기" },
   { id: "step8", title: "8. 주간보호센터 구조설계 및 인테리어 주의점" },
-  { id: "step9", title: "9. 주간보호센터 창업절차 실전 16단계" },
+  { id: "step9", title: "9. 주간보호센터 창업절차 실전 16단계", externalUrl: "https://www.youtube.com/watch?v=eU75obHOb6Y&list=PLCrWuYsmvlfLzrxTbU6Cdyre5hneGshD4" },
   { id: "step10", title: "10. 치매 어르신 돌봄철학과 주간보호센터 창업 가치" },
+  { id: "step11", title: "11. 9인 요양원 창업 할만할까?" },
+  { id: "step12", title: "12. 요양원 창업 전, 반드시 보셔야하는 TOP 5" },
+  { id: "step13", title: "13. 요양원 창업 18단계 절차", externalUrl: "https://www.youtube.com/watch?v=lMZZpfuGZiA" },
 ];
 
 export default function App() {
@@ -53,7 +61,7 @@ export default function App() {
     
     const validIds: ArticleId[] = [
       "step-intro", "step1", "step2", "step3", "step4", "step5",
-      "step6", "step7", "step8", "step9", "step10"
+      "step6", "step7", "step8", "step9", "step10", "step11", "step12"
     ];
 
     if (stepParam && validIds.includes(stepParam)) {
@@ -120,6 +128,14 @@ export default function App() {
       case "step10":
         pageTitle = "10. 치매 어르신 돌봄철학과 주간보호센터 창업 가치 | 굿케어";
         pageDesc = "어르신 학대 예방부터 사람의 존엄을 지켜내는 굿케어만의 명품 실버 케어 철학과 지속 가능한 운영 비전을 나눕니다.";
+        break;
+      case "step11":
+        pageTitle = "11. 9인 요양원 창업 할만할까? | 굿케어";
+        pageDesc = "소규모 9인 요양원(공동생활가정) 창업의 대원칙인 주택/상가 임대 요건 분석부터 어르신 모집 노하우, 법적 인력 배치와 실제 월 순수익 예산을 속시원히 공개합니다.";
+        break;
+      case "step12":
+        pageTitle = "12. 요양원 창업 전, 반드시 보셔야하는 TOP 5 | 굿케어";
+        pageDesc = "요양원 창업 대표님들이 반드시 걸러야 할 5대 함정! 최소 단층 면적 기준, 49인 vs 50인 필수 배치 인건비 폭락 구조, 도심 초밀착형 입지 전설, 29인 실제 실수령액 순이익을 완벽 분석해 드립니다.";
         break;
       case "step-intro":
       default:
@@ -326,14 +342,13 @@ export default function App() {
             </li>
 
             {TOC_ITEMS.map((item) => {
-              const isYoutubeLink = item.id === "step9";
-              const youtubeUrl = "https://www.youtube.com/watch?v=eU75obHOb6Y&list=PLCrWuYsmvlfLzrxTbU6Cdyre5hneGshD4";
+              const isExternal = !!item.externalUrl;
               
-              if (isYoutubeLink) {
+              if (isExternal) {
                 return (
                   <li key={item.id}>
                     <a
-                      href={youtubeUrl}
+                      href={item.externalUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full text-left flex items-center justify-between px-4 py-3.5 rounded-xl font-bold transition-all border duration-200 text-[15px] bg-slate-50 text-slate-700 border-transparent hover:bg-blue-50/50 hover:text-blue-600 hover:border-blue-100"
@@ -436,6 +451,8 @@ export default function App() {
                 {activeTab === "step8" && <Step8 />}
                 {activeTab === "step9" && <Step9 />}
                 {activeTab === "step10" && <Step10 />}
+                {activeTab === "step11" && <Step11 />}
+                {activeTab === "step12" && <Step12 />}
               </motion.div>
             </AnimatePresence>
           </div>
@@ -645,14 +662,13 @@ export default function App() {
                     </a>
 
                     {TOC_ITEMS.map((item) => {
-                      const isYoutubeLink = item.id === "step9";
-                      const youtubeUrl = "https://www.youtube.com/watch?v=eU75obHOb6Y&list=PLCrWuYsmvlfLzrxTbU6Cdyre5hneGshD4";
+                      const isExternal = !!item.externalUrl;
 
-                      if (isYoutubeLink) {
+                      if (isExternal) {
                         return (
                           <a
                             key={item.id}
-                            href={youtubeUrl}
+                            href={item.externalUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => setIsModalOpen(false)}
