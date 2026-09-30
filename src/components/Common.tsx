@@ -29,16 +29,16 @@ export function Logo({ className = "w-10 h-10", containerClassName = "" }: { cla
       <svg className="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="fallbackGoodCareGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#60a5fa" />
-            <stop offset="60%" stop-color="#2563eb" />
-            <stop offset="100%" stop-color="#1d4ed8" />
+            <stop offset="0%" stopColor="#60a5fa" />
+            <stop offset="60%" stopColor="#2563eb" />
+            <stop offset="100%" stopColor="#1d4ed8" />
           </linearGradient>
           <linearGradient id="fallbackLeafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#34d399" />
-            <stop offset="100%" stop-color="#059669" />
+            <stop offset="0%" stopColor="#34d399" />
+            <stop offset="100%" stopColor="#059669" />
           </linearGradient>
         </defs>
-        <circle cx="50" cy="50" r="46" fill="none" stroke="#e2e8f0" stroke-width="2" />
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#e2e8f0" strokeWidth="2" />
         <g transform="translate(0, -2)">
           <path d="M50 35 C41 22, 22 25, 22 44 C22 62, 50 78, 50 78 C50 78, 78 62, 78 44 C78 25, 59 22, 50 35 Z" fill="url(#fallbackGoodCareGrad)" opacity="0.95" />
           <path d="M34 52 C34 43, 44 38, 50 45 C56 38, 66 43, 66 52 C66 61, 50 71, 50 71 C50 71, 34 61, 34 52 Z" fill="#ffffff" />
@@ -60,16 +60,16 @@ export function Logo({ className = "w-10 h-10", containerClassName = "" }: { cla
 // 형광펜 스타일 하이라이트
 export function Highlight({ children }: { children: ReactNode }) {
   return (
-    <span className="font-bold text-[#e53e3e] shadow-[inset_0_-10px_0_#fef08a] px-1 rounded-sm">
+    <span className="font-bold text-[#d93838] shadow-[inset_0_-8px_0_#fef08a] px-1 rounded-xs">
       {children}
     </span>
   );
 }
 
-// 본문 인용구 스타일
+// 본문 인용구 스타일 - 단일 규격 (글자 크기 16px, 행간, Pretendard 폰트)
 export function Quote({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <div className={`my-6 font-bold bg-[#f8fafc] p-5 border-l-4 border-[#3182ce] text-[19px] leading-relaxed text-gray-800 rounded-r-md ${className}`}>
+    <div className={`my-6 font-semibold bg-[#f8fafc] p-4 sm:p-5 border-l-4 border-[#2563eb] text-[15.5px] sm:text-[16px] leading-[1.8] text-slate-800 rounded-r-xl shadow-xs ${className}`}>
       {children}
     </div>
   );
@@ -78,7 +78,7 @@ export function Quote({ children, className = "" }: { children: ReactNode; class
 // 주의/경고용 우측 인용구 스타일
 export function WarningQuote({ children }: { children: ReactNode }) {
   return (
-    <div className="my-6 font-bold bg-[#fff5f5] p-5 border-l-4 border-[#e53e3e] text-[19px] leading-relaxed text-[#c53030] rounded-r-md">
+    <div className="my-6 font-bold bg-[#fff5f5] p-4 sm:p-5 border-l-4 border-[#ef4444] text-[15.5px] sm:text-[16px] leading-[1.8] text-[#b91c1c] rounded-r-xl shadow-xs">
       {children}
     </div>
   );
@@ -87,8 +87,8 @@ export function WarningQuote({ children }: { children: ReactNode }) {
 // 노란색 마인드체크 박스 스타일
 export function InfoBox({ children, title }: { children: ReactNode; title?: string }) {
   return (
-    <div className="my-6 bg-[#fffbeb] p-5 border border-[#fde68a] text-[19px] leading-relaxed text-[#92400e] rounded-md">
-      {title && <h4 className="font-bold mb-3 text-[#b45309]">{title}</h4>}
+    <div className="my-6 bg-[#fffbeb] p-4 sm:p-5 border border-[#fde68a] text-[15.5px] sm:text-[16px] leading-[1.8] text-[#92400e] rounded-xl shadow-xs">
+      {title && <h4 className="font-black mb-2.5 text-[#b45309] text-[16.5px]">{title}</h4>}
       {children}
     </div>
   );
@@ -97,18 +97,18 @@ export function InfoBox({ children, title }: { children: ReactNode; title?: stri
 // 이미지 컴포넌트 (우측 마우스 방지 및 엑박 방지 대비)
 export function ColumnImage({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
   return (
-    <div className="my-6 select-none pointer-events-none w-full">
+    <figure className="my-6 select-none pointer-events-none w-full">
       <img
         src={src}
         alt={alt}
         referrerPolicy="no-referrer"
-        className="w-full h-auto rounded-lg shadow-sm max-h-[300px] object-cover transition-transform duration-300 hover:scale-[1.02]"
+        className="w-full h-auto rounded-xl shadow-xs border border-slate-100 max-h-[320px] object-cover"
       />
       {caption && (
-        <p className="text-center text-sm text-[#718096] mt-2 font-sans font-medium">
+        <figcaption className="text-center text-xs sm:text-sm text-slate-500 mt-2 font-medium">
           {caption}
-        </p>
+        </figcaption>
       )}
-    </div>
+    </figure>
   );
 }
