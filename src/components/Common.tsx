@@ -95,14 +95,24 @@ export function InfoBox({ children, title }: { children: ReactNode; title?: stri
 }
 
 // 이미지 컴포넌트 (우측 마우스 방지 및 엑박 방지 대비)
-export function ColumnImage({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
+export function ColumnImage({ 
+  src, 
+  alt, 
+  caption, 
+  className = "w-full h-auto rounded-xl shadow-xs border border-slate-100 object-cover" 
+}: { 
+  src: string; 
+  alt: string; 
+  caption?: string; 
+  className?: string;
+}) {
   return (
-    <figure className="my-6 select-none pointer-events-none w-full">
+    <figure className="my-6 select-none w-full">
       <img
         src={src}
         alt={alt}
         referrerPolicy="no-referrer"
-        className="w-full h-auto rounded-xl shadow-xs border border-slate-100 max-h-[320px] object-cover"
+        className={className}
       />
       {caption && (
         <figcaption className="text-center text-xs sm:text-sm text-slate-500 mt-2 font-medium">

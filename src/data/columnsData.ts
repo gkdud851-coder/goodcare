@@ -1,12 +1,12 @@
 export interface ColumnMeta {
   id: string; // e.g. "step1"
-  stepNumber: number; // 1 ~ 13
+  stepNumber: number; // 1 ~ 15
   slug: string; // "1"
   aliases: string[]; // ["step1", "1"]
   path: string; // "/column/1"
   title: string;
   shortTitle: string;
-  category: "주간보호센터 창업" | "요양원 창업";
+  category: "주간보호센터 창업" | "요양원 창업" | "방문요양 창업";
   pageTitle: string;
   description: string;
   keywords: string;
@@ -217,6 +217,36 @@ export const COLUMNS_DATA: ColumnMeta[] = [
     readTime: "영상",
     isYouTube: true,
     youtubeUrl: "https://www.youtube.com/@goodcare1"
+  },
+  {
+    id: "step14",
+    stepNumber: 14,
+    slug: "14",
+    aliases: ["14", "step14", "방문요양-창업-제발-혼자-하세요"],
+    path: "/column/14",
+    title: "14. 방문요양 창업, 제발 혼자 하세요",
+    shortTitle: "방문요양 창업, 제발 혼자 하세요",
+    category: "방문요양 창업",
+    pageTitle: "14. 방문요양 창업, 제발 혼자 하세요 | 굿케어",
+    description: "방문요양센터 프랜차이즈 가맹비 및 2~3천만원 컨설팅의 허상과 요양보호사 15명 수급 요건, 전산 청구 현실 등 혼자 창업해야 하는 이유를 짚어드립니다.",
+    keywords: "방문요양창업, 방문요양센터설립, 방문요양컨설팅, 재가복지센터창업, 굿케어, 천천박사",
+    summary: "방문요양은 프랜차이즈나 수천만원 컨설팅으로 하는 사업이 아닙니다. 현실적인 수익구조와 혼자 시작해야 하는 이유를 전합니다.",
+    readTime: "5분"
+  },
+  {
+    id: "step15",
+    stepNumber: 15,
+    slug: "15",
+    aliases: ["15", "step15", "방문요양-소자본-창업-5평으로-진짜-될까", "방문요양-소자본-창업"],
+    path: "/column/15",
+    title: "15. 방문요양 소자본 창업, 5평으로 진짜 될까?",
+    shortTitle: "방문요양 5평 소자본 창업의 진실",
+    category: "방문요양 창업",
+    pageTitle: "15. 방문요양 소자본 창업, 5평으로 진짜 될까? | 굿케어",
+    description: "사무실 5평 소자본 창업으로 시작하는 방문요양센터의 현실적인 수익과 주간보호·요양원 확장 퍼널 전략, 그리고 100명 이상 규모화의 비결을 공개합니다.",
+    keywords: "방문요양5평, 방문요양소자본창업, 방문요양수익구조, 주간보호연계, 굿케어, 천천박사",
+    summary: "방문요양 5평 소자본 창업의 한계와 주간보호·요양원으로 확장하는 성공 로드맵을 상세히 알려드립니다.",
+    readTime: "5분"
   }
 ];
 
@@ -271,12 +301,12 @@ export function getPageMetadata(pathname: string, search = ""): PageMetadata {
   // Check columns list page
   if (cleanPath === "/columns") {
     return {
-      title: "창업 가이드 칼럼 전체보기 (총 13편) | 굿케어 주간보호센터·요양원",
-      description: "주간보호센터 및 요양원 창업 인허가 실전 가이드, 노유자시설 용도변경, 무경력자 정원 마감 비법 칼럼 13편을 제공합니다.",
-      keywords: "주간보호센터창업, 요양원창업, 창업칼럼, 장기요양가이드, 굿케어",
+      title: "창업 가이드 칼럼 전체보기 (총 15편) | 굿케어 주간보호·요양원·방문요양",
+      description: "주간보호센터, 요양원, 방문요양 창업 인허가 실전 가이드, 노유자시설 용도변경, 무경력자 정원 마감 비법 칼럼 15편을 제공합니다.",
+      keywords: "주간보호센터창업, 요양원창업, 방문요양창업, 창업칼럼, 장기요양가이드, 굿케어",
       canonicalUrl: `${origin}/columns`,
-      ogTitle: "창업 가이드 칼럼 전체보기 (총 13편) | 굿케어",
-      ogDescription: "주간보호센터 및 요양원 창업 인허가 실전 가이드, 노유자시설 용도변경, 무경력자 정원 마감 비법 칼럼 13편을 제공합니다.",
+      ogTitle: "창업 가이드 칼럼 전체보기 (총 15편) | 굿케어",
+      ogDescription: "주간보호센터, 요양원, 방문요양 창업 인허가 실전 가이드, 노유자시설 용도변경, 무경력자 정원 마감 비법 칼럼 15편을 제공합니다.",
       ogImage: defaultOgImage,
       ogUrl: `${origin}/columns`
     };

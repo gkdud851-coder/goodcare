@@ -9,6 +9,7 @@ import ColumnsList from "./components/ColumnsList";
 import { Step1, Step2, Step3, Step4, Step5 } from "./components/ColumnsPart1";
 import { Step6, Step7, Step8, Step9, Step10 } from "./components/ColumnsPart2";
 import { Step11, Step12, Step13 } from "./components/ColumnsPart3";
+import { Step14, Step15 } from "./components/ColumnsPart4";
 import { COLUMNS_DATA, ColumnMeta, getColumnByIdOrSlug, DEFAULT_METADATA, CONSULTING_SURVEY_URL } from "./data/columnsData";
 
 export type CurrentView = 
@@ -218,6 +219,10 @@ export default function App({ initialPath = "/" }: { initialPath?: string }) {
             return <Step12 />;
           case 13:
             return <Step13 />;
+          case 14:
+            return <Step14 />;
+          case 15:
+            return <Step15 />;
           default:
             return <Step1 />;
         }
@@ -353,7 +358,7 @@ export default function App({ initialPath = "/" }: { initialPath?: string }) {
         </div>
 
         <div className="flex items-center justify-between border-t border-slate-100 pt-4 mb-2">
-          <span className="text-xs font-bold text-slate-400">창업 칼럼 목차 (총 13편)</span>
+          <span className="text-xs font-bold text-slate-400">창업 칼럼 목차 (총 15편)</span>
           <a
             href="/columns"
             onClick={(e) => {
@@ -539,7 +544,7 @@ export default function App({ initialPath = "/" }: { initialPath?: string }) {
                   <div className="flex items-center justify-between px-6 pb-2 border-b border-slate-50 shrink-0">
                     <h3 className="font-extrabold text-base text-slate-900 flex items-center gap-1.5">
                       <BookOpen className="w-4 h-4 text-blue-600" />
-                      창업 가이드 칼럼 목차 (총 13편)
+                      창업 가이드 칼럼 목차 (총 15편)
                     </h3>
                     <button
                       onClick={() => setIsModalOpen(false)}

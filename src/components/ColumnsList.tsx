@@ -4,6 +4,7 @@ import { COLUMNS_DATA, ColumnMeta, CONSULTING_SURVEY_URL } from "../data/columns
 export default function ColumnsList({ onSelectColumn }: { onSelectColumn?: (col: ColumnMeta) => void }) {
   const dayCareColumns = COLUMNS_DATA.filter(c => c.category === "주간보호센터 창업");
   const nursingHomeColumns = COLUMNS_DATA.filter(c => c.category === "요양원 창업");
+  const homeCareColumns = COLUMNS_DATA.filter(c => c.category === "방문요양 창업");
 
   const renderColumnCard = (col: ColumnMeta) => {
     return (
@@ -105,7 +106,7 @@ export default function ColumnsList({ onSelectColumn }: { onSelectColumn?: (col:
           굿케어 창업 가이드 칼럼 전체보기
         </h1>
         <p className="mt-3 text-slate-600 text-sm sm:text-base font-medium">
-          천천박사가 직접 전하는 주간보호센터 & 요양원 창업 성공 방정식 (총 13편)
+          천천박사가 직접 전하는 주간보호센터 · 요양원 · 방문요양 창업 성공 방정식 (총 15편)
         </p>
       </div>
 
@@ -132,6 +133,19 @@ export default function ColumnsList({ onSelectColumn }: { onSelectColumn?: (col:
         </div>
         <div className="grid grid-cols-1 gap-4">
           {nursingHomeColumns.map(renderColumnCard)}
+        </div>
+      </section>
+
+      {/* 3. 방문요양 & 재가복지센터 창업 가이드 (14~15편) */}
+      <section className="mb-10">
+        <div className="flex items-center gap-2 mb-4 pb-2 border-b-2 border-slate-200">
+          <span className="w-2.5 h-6 bg-indigo-600 rounded-full" />
+          <h2 className="text-xl font-black text-slate-900">
+            방문요양 & 재가복지센터 창업 실전 칼럼 (14~15편)
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-4">
+          {homeCareColumns.map(renderColumnCard)}
         </div>
       </section>
 

@@ -20,8 +20,8 @@ export function renderRoute(urlPath: string): RenderResult {
     appHtml = renderToString(<App initialPath="/" />);
     canonical = "https://goodcarestart.com/";
   } else if (cleanPath === "/columns" || cleanPath === "/column") {
-    title = "창업 칼럼 목록 | 굿케어 주간보호센터 & 요양원 창업 가이드";
-    description = "주간보호센터 및 요양원 창업의 13단계 실전 노하우! 자격증, 무경력, 양도양수, 정부지원금, 노유자시설, 9인 요양원 수익 분석까지 총망라.";
+    title = "창업 칼럼 목록 (총 15편) | 굿케어 주간보호·요양원·방문요양";
+    description = "주간보호센터, 요양원, 방문요양 창업의 15단계 실전 노하우! 자격증, 무경력, 양도양수, 정부지원금, 노유자시설, 9인 요양원, 방문요양 5평 창업까지 총망라.";
     canonical = "https://goodcarestart.com/columns";
     appHtml = renderToString(<App initialPath="/columns" />);
   } else if (cleanPath === "/consulting") {
