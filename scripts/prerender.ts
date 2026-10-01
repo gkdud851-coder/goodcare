@@ -87,4 +87,19 @@ for (const route of routes) {
   console.log(`[SSG] Generated static HTML for: ${route} -> ${path.relative(process.cwd(), outFilePath)}`);
 }
 
+// Explicitly ensure sitemap.xml and robots.txt are copied to dist
+const publicSitemap = path.resolve(process.cwd(), "public", "sitemap.xml");
+const distSitemap = path.resolve(distDir, "sitemap.xml");
+if (fs.existsSync(publicSitemap)) {
+  fs.copyFileSync(publicSitemap, distSitemap);
+  console.log(`[SSG] Verified & copied sitemap.xml -> ${distSitemap}`);
+}
+
+const publicRobots = path.resolve(process.cwd(), "public", "robots.txt");
+const distRobots = path.resolve(distDir, "robots.txt");
+if (fs.existsSync(publicRobots)) {
+  fs.copyFileSync(publicRobots, distRobots);
+  console.log(`[SSG] Verified & copied robots.txt -> ${distRobots}`);
+}
+
 console.log("SSG pre-render completed successfully!");

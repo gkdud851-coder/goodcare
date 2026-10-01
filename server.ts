@@ -9,6 +9,34 @@ const PORT = 3000;
 async function createServer() {
   const app = express();
 
+  // Explicit route for sitemap.xml with strict no-cache headers to bypass CDN caching
+  app.get("/sitemap.xml", (_req, res) => {
+    const sitemapPath = isProd && fs.existsSync(path.resolve(process.cwd(), "dist", "sitemap.xml"))
+      ? path.resolve(process.cwd(), "dist", "sitemap.xml")
+      : path.resolve(process.cwd(), "public", "sitemap.xml");
+
+    res.setHeader("Content-Type", "application/xml; charset=utf-8");
+    res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate, max-age=0");
+    res.setHeader("Pragma", "no-cache");
+    res.setHeader("Expires", "0");
+    res.setHeader("CDN-Cache-Control", "no-store");
+    res.setHeader("Cloudflare-CDN-Cache-Control", "no-store");
+    res.sendFile(sitemapPath);
+  });
+
+  // Explicit route for robots.txt
+  app.get("/robots.txt", (_req, res) => {
+    const robotsPath = isProd && fs.existsSync(path.resolve(process.cwd(), "dist", "robots.txt"))
+      ? path.resolve(process.cwd(), "dist", "robots.txt")
+      : path.resolve(process.cwd(), "public", "robots.txt");
+
+    res.setHeader("Content-Type", "text/plain; charset=utf-8");
+    res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate, max-age=0");
+    res.setHeader("CDN-Cache-Control", "no-store");
+    res.setHeader("Cloudflare-CDN-Cache-Control", "no-store");
+    res.sendFile(robotsPath);
+  });
+
   if (!isProd) {
     // Development mode: use Vite dev middleware
     const { createServer: createViteServer } = await import("vite");
