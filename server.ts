@@ -58,7 +58,7 @@ async function createServer() {
         }
 
         // Inject server-rendered DOM into #root
-        html = html.replace('<div id="root"></div>', `<div id="root">${result.html}</div>`);
+        html = html.replace(/<div id="root">.*?<\/div>/s, `<div id="root">${result.html}</div>`);
 
         res.status(200).set({ "Content-Type": "text/html" }).end(html);
       } catch (e: any) {
@@ -87,7 +87,10 @@ async function createServer() {
 
       // If not pre-rendered, render on the fly with SSR
       try {
-        const template = fs.readFileSync(path.join(distPath, "index.html"), "utf-8");
+        const templateFile = fs.existsSync(path.join(distPath, "index.template.html"))
+          ? path.join(distPath, "index.template.html")
+          : path.join(distPath, "index.html");
+        const template = fs.readFileSync(templateFile, "utf-8");
         const result = renderRoute(req.originalUrl);
 
         let html = template
@@ -105,7 +108,7 @@ async function createServer() {
             `<meta property="og:description" content="${result.description.replace(/"/g, "&quot;")}" />`
           );
 
-        html = html.replace('<div id="root"></div>', `<div id="root">${result.html}</div>`);
+        html = html.replace(/<div id="root">.*?<\/div>/s, `<div id="root">${result.html}</div>`);
         res.status(200).set({ "Content-Type": "text/html" }).end(html);
       } catch (err) {
         res.sendFile(path.join(distPath, "index.html"));

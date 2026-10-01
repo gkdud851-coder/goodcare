@@ -22,6 +22,9 @@ if (!fs.existsSync(templatePath)) {
 
 const template = fs.readFileSync(templatePath, "utf-8");
 
+// Save unrendered template for runtime SSR fallback
+fs.writeFileSync(path.join(distDir, "index.template.html"), template, "utf-8");
+
 for (const route of routes) {
   const result = renderRoute(route);
 
@@ -66,7 +69,7 @@ for (const route of routes) {
 
   // Inject rendered HTML into #root
   html = html.replace(
-    '<div id="root"></div>',
+    /<div id="root">.*?<\/div>/s,
     `<div id="root">${result.html}</div>`
   );
 
